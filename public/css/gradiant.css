@@ -1,0 +1,74 @@
+#gradiant {
+  display: flex ;
+}
+
+#gradiant :nth-child(1) {
+  position: absolute;
+  top: -41px;
+  left: 0;
+  z-index: 1;
+  width: 605px;
+  height: 355px;
+  flex-shrink: 0;
+  border-radius: 844px;
+  background: rgba(0, 104, 148, 0.34);
+  mix-blend-mode: hard-light;
+  filter: blur(139px);
+}
+
+#gradiant :nth-child(2) {
+  position: absolute;
+  bottom: 68px;
+  left: 76px;
+  z-index: 1;
+  width: 844px;
+  height: 355px;
+  flex-shrink: 0;
+  border-radius: 844px;
+  background: rgba(0, 42, 148, 0.17);
+  mix-blend-mode: hard-light;
+  filter: blur(139px);
+}
+
+
+#gradiant :nth-child(3) {
+  position: absolute;
+  top: 579px;
+  left: 756px;
+  z-index: 1;
+  width: 844px;
+  height: 355px;
+  flex-shrink: 0;
+  border-radius: 844px;
+  background: rgba(65, 0, 148, 0.34);
+  mix-blend-mode: hard-light;
+  filter: blur(139px);
+}
+
+#gradiant :nth-child(4) {
+  position: absolute;
+  top: 55px;
+  left: 746px;
+  z-index: 1;
+  width: 844px;
+  height: 355px;
+  flex-shrink: 0;
+  border-radius: 844px;
+  background: rgba(21, 0, 148, 0.34);
+  mix-blend-mode: hard-light;
+  filter: blur(139px);
+}
+
+#gradiant :nth-child(5) {
+  position: absolute;
+  top: 295px;
+  left: -566px;
+  z-index: 1;
+  width: 2446px;
+  height: 278px;
+  flex-shrink: 0;
+  border-radius: 2446px;
+  background: rgba(65, 0, 148, 0.34);
+  mix-blend-mode: hard-light;
+  filter: blur(139px);
+}

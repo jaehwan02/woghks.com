@@ -1,0 +1,40 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 0 0;
+}
+
+#left-nav {
+  display: flex;
+  padding: 0 0 0 18px;
+}
+
+#right-nav {
+  display: flex;
+}
+#right-nav div {
+  padding: 0 18px;
+}
+
+#left-nav :nth-child(2) {
+  color: #FFF;
+  text-shadow: 0px 0px 20px #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  z-index: 1;
+
+}
+
+#right-nav :nth-child(1) {
+  color: #FFF;
+  text-shadow: 0px 0px 20px #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  z-index: 1;
+}
