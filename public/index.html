@@ -7,21 +7,44 @@
 
   
   <style>
+    @font-face {
+      font-family: 'PyeongChangPeace';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'PyeongChangPeace';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+      font-weight: 300;
+      font-style: normal;
+    }
+
 
     * {
       padding: 0;
       margin: 0;
+      font-family: "PyeongChangPeace";
+      font-weight: 300;
     }
 
     html {
       overflow-x: clip;
     }
 
+    h1{
+      color: #FFF;
+      text-shadow: 0px 0px 17px rgba(255, 255, 255, 0.80);
+      font-size: 65.001px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
 
     #page {
       width: 100vw;
       min-height: 100vh;
-      /* height: 832px; */
       background: #0E0E0F;
     }
 
@@ -55,7 +78,7 @@
     #main-wrap {
       z-index: 2;
       width: 560px;
-      height: 740px;
+      height: 720px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -164,20 +187,19 @@
     #left-nav :nth-child(2) {
       color: #FFF;
       text-shadow: 0px 0px 20px #FFF;
-      font-family: "PyeongChang Peace";
-      font-size: 20px;
+      font-size: 14px;
       font-style: normal;
       font-weight: 300;
       line-height: normal;
       letter-spacing: 0.2px;
       z-index: 1;
+
     }
 
     #right-nav :nth-child(1) {
       color: #FFF;
       text-shadow: 0px 0px 20px #FFF;
-      font-family: "PyeongChang Peace";
-      font-size: 20px;
+      font-size: 14px;
       font-style: normal;
       font-weight: 300;
       line-height: normal;
@@ -186,6 +208,72 @@
     }
 
   </style>
+
+  <style>
+    #image :nth-child(1) {
+      position: absolute;
+      top: 248px;
+      left: 806px;
+      z-index: 1;
+      width: 146.089px;
+      height: 141.59px;
+      transform: rotate(3.101deg);
+      flex-shrink: 0;
+      fill: radial-gradient(50% 50% at 50% 50%, #FFF 0%, #CDCDCD 100%);
+      filter: drop-shadow(0px 0px 20px #FFF);
+    }
+
+    #image :nth-child(2) {
+      position: absolute;
+      top: 11px;
+      left: 16px;
+      z-index: 1;
+
+      width: 852px;
+      height: 359.5px;
+      flex-shrink: 0;
+
+      fill: rgba(255, 255, 255, 0.03);
+    }
+
+
+  </style>
+    
+
+  <style>
+    #atag :nth-child(1) {
+      width: 25.49px;
+      height: 25.49px;
+      flex-shrink: 0;
+      fill: #FFF;
+      filter: drop-shadow(2px 2px 4px rgba(255, 255, 255, 0.25));
+    }
+
+    #atag :nth-child(2) {
+
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+      fill: #FFF;
+      filter: drop-shadow(2px 2px 4px rgba(255, 255, 255, 0.25));
+    }
+    #atag :nth-child(3) {
+      width: 25.496px;
+      height: 25.496px;
+      flex-shrink: 0;
+
+      fill: #FFF;
+      filter: drop-shadow(2px 2px 4px rgba(255, 255, 255, 0.25));
+    }
+
+    footer div {
+      width: 83px;
+      height: 83px;
+      flex-shrink: 0;
+    }
+
+  </style>
+
 
   <style>
 
@@ -202,8 +290,8 @@
 
     <header>
       <div id="left-nav">
-        <div><img src="#" alt="달"></div>
-        <div><a href="#">jaehwan</a></div>
+        <div><img src="./sMoon.svg" alt="달"></div>
+        <div><a href="#">Jaehwan, Lee</a></div>
       </div>
       <div id="right-nav">
         <div><a href="#">About me</a></div>
@@ -218,17 +306,24 @@
           <div><h3>풀스택 개발자가 되고픈</h3></div>
           <div><h1>이재환의 포트폴리오</h1></div>
           <div id="atag">
-            <img src="#" alt="깃헙">
-            <img src="#" alt="벨로그">
-            <img src="#" alt="인스타">
+            <img src="./velog.svg" alt="깃헙">
+            <img src="./github.svg" alt="벨로그">
+            <img src="./instagram.svg" alt="인스타">
           </div>
         </div>
       </div>
     </main>
 
     <footer>
-      <img src="#" alt="스크롤">
+      <img src="./scroll.svg" alt="스크롤">
     </footer>
+
+
+    <div id="image">
+      <img src="./mMoon.svg">]
+      <img src="./light.svg">
+
+    </div>
 
     <div id="gradiant">
       <div></div>
