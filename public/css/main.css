@@ -29,6 +29,12 @@ h3 {
   align-content: center;
 }
 
+#main-wrap div {
+  position: relative;
+  z-index: 1;
+}
+
+
 #main-wrap div :nth-child(3) {
   display: flex;
   justify-content: flex-end;
