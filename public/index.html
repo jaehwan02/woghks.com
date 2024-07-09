@@ -98,3 +98,39 @@
 
 </body>
 </html>
+
+<script>
+  var startX
+  var startY
+
+  function adjustLight() {
+    console.log("adjust")
+    const moon = document.getElementById('mMoon');
+    const light = document.getElementById('light');
+    const headerMoon = document.querySelector("#left-nav > div:nth-child(1) > img")
+    
+    const headreMoonRect = headerMoon.getBoundingClientRect();
+    const lightRect = light.getBoundingClientRect();
+    const moonRect = moon.getBoundingClientRect();
+    
+    const lightWidth = light.offsetWidth;
+    
+    if(!light.style.top){
+    startX = headreMoonRect.left + headreMoonRect.width/2;
+    startY = headreMoonRect.top - lightRect.height/2 + headreMoonRect.height*1.2;
+
+      light.style.top = `${startY}px`;
+      light.style.left = `${startX}px`;
+    }
+    
+    console.log(startX, startY);
+    
+    light.style.transform = "";
+    
+    const angle = Math.atan2((moonRect.top) - startY,  (moonRect.left+moonRect.width/2) - startX) * 180 / Math.PI;
+    light.style.transform = `rotate(${angle}deg)`;
+  }
+
+  window.addEventListener('resize', adjustLight);
+  window.addEventListener('load', adjustLight);
+</script>
