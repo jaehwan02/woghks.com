@@ -1,14 +1,12 @@
 footer {
+  padding: 0 0 3.6vh 0;
   display: flex;
   justify-content: center;
-  color: white;
+  height: 3.35vh;
 }
 
 #scroll {
-  position: absolute;
-  bottom: 3.6vh;
   width: 2.42vw;
   height: 2.16vh;
-  flex-shrink: 0;
 }
  

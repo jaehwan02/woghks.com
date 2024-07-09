@@ -4,28 +4,26 @@
 
 #gradiant :nth-child(1) {
   position: absolute;
-  top: 724px;
+  top: 752px;
   left: 0;
   z-index: 1;
   width: 605px;
   height: 355px;
-  flex-shrink: 0;
   border-radius: 844px;
-  background: rgba(0, 104, 148, 0.34);
-  mix-blend-mode: hard-light;
-  filter: blur(139px);
+  background: rgba(0, 104, 148, 0.3);
+  filter: blur(193px);
 }
 
 #gradiant :nth-child(2) {
   position: absolute;
-  bottom: -698px;
+  bottom: 50px;
   left: 76px;
   z-index: 1;
   width: 844px;
   height: 355px;
   flex-shrink: 0;
   border-radius: 844px;
-  background: rgba(0, 42, 148, 0.17);
+  background: rgba(0, 42, 148, 0.3);
   mix-blend-mode: hard-light;
   filter: blur(139px);
 }
