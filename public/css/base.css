@@ -11,11 +11,7 @@
   font-style: normal;
 }
 
-#page {
-  width: 100vw;
-  min-height: 100vh;
-  background: #0E0E0F;
-}
+
 
 * {
   padding: 0;
@@ -25,6 +21,7 @@
 }
 html {
   overflow-x: clip;
+  background: #0E0E0F;
 }
 
 a {
