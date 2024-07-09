@@ -1,7 +1,6 @@
 .title h2 {
   color: #FFF;
   text-shadow: 0px 0px 17px rgba(255, 255, 255, 0.80);
-  font-family: "PyeongChang Peace";
   font-size: 2.125rem;
   font-style: normal;
   font-weight: 300;
@@ -26,7 +25,6 @@
 .block h3 {
   margin-bottom: 20px;
   color: #FFF;
-  font-family: "PyeongChang Peace";
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 300;
@@ -35,7 +33,6 @@
 
 .block p {
   color: #FFF;
-  font-family: "PyeongChang Peace";
   font-size: 1rem;
   font-style: normal;
   font-weight: 300;
