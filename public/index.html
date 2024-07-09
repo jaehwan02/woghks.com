@@ -100,37 +100,55 @@
 </html>
 
 <script>
-  var startX
-  var startY
+  var startX;
+  var startY;
 
   function adjustLight() {
-    console.log("adjust")
+    console.log("adjust");
     const moon = document.getElementById('mMoon');
     const light = document.getElementById('light');
-    const headerMoon = document.querySelector("#left-nav > div:nth-child(1) > img")
-    
-    const headreMoonRect = headerMoon.getBoundingClientRect();
+    const headerMoon = document.querySelector("#left-nav > div:nth-child(1) > img");
+
+    const headerMoonRect = headerMoon.getBoundingClientRect();
     const lightRect = light.getBoundingClientRect();
     const moonRect = moon.getBoundingClientRect();
-    
+
     const lightWidth = light.offsetWidth;
-    
-    if(!light.style.top){
-    startX = headreMoonRect.left + headreMoonRect.width/2;
-    startY = headreMoonRect.top - lightRect.height/2 + headreMoonRect.height*1.2;
+
+    if (!light.style.top) {
+      startX = headerMoonRect.left;
+      startY = headerMoonRect.top - lightRect.height / 2 + headerMoonRect.height*3;
 
       light.style.top = `${startY}px`;
       light.style.left = `${startX}px`;
     }
-    
+
     console.log(startX, startY);
-    
+
     light.style.transform = "";
-    
-    const angle = Math.atan2((moonRect.top) - startY,  (moonRect.left+moonRect.width/2) - startX) * 180 / Math.PI;
+
+    const angle = Math.atan2((moonRect.top) - startY, (moonRect.left + moonRect.width*0.3) - startX) * 180 / Math.PI + 1.3;
     light.style.transform = `rotate(${angle}deg)`;
+
+    const scale = Math.sqrt(Math.pow(moonRect.top - startY,2) + Math.pow(moonRect.left - startX + moonRect.width*0.3,2))/1023;
+    light.style.transform += ` scale(${scale})`;
+    console.log(scale);
   }
 
   window.addEventListener('resize', adjustLight);
   window.addEventListener('load', adjustLight);
 </script>
+
+
+<!-- lightRect.width:Math.sqrt(Math.pow(MoonRect.top - startY) + Math.pow(MoonRect.left - startX)) = 1:x
+
+Math.sqrt(Math.pow(MoonRect.top - startX) + Math.pow(MoonRect.left - startY))/1022 = x
+
+x = 배수 = scale 
+
+
+moonRect.width*0.3
+
+
+
+-->
