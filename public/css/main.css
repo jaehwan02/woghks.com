@@ -1,4 +1,5 @@
 main{
+  padding-top: 6.95vh;
   height: 86.1vh;
   display: flex;
   justify-content: center;
@@ -31,7 +32,7 @@ h3 {
 
 #main-wrap div {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 
