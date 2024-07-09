@@ -4,7 +4,7 @@
 
 #gradiant :nth-child(1) {
   position: absolute;
-  top: -41px;
+  top: 724px;
   left: 0;
   z-index: 1;
   width: 605px;
@@ -18,7 +18,7 @@
 
 #gradiant :nth-child(2) {
   position: absolute;
-  bottom: 68px;
+  bottom: -698px;
   left: 76px;
   z-index: 1;
   width: 844px;
@@ -31,9 +31,9 @@
 }
 
 
-#gradiant :nth-child(3) {
+/* #gradiant :nth-child(3) {
   position: absolute;
-  top: 579px;
+  top: 1299px;
   left: 756px;
   z-index: 1;
   width: 844px;
@@ -47,7 +47,7 @@
 
 #gradiant :nth-child(4) {
   position: absolute;
-  top: 55px;
+  top:775px;
   left: 746px;
   z-index: 1;
   width: 844px;
@@ -61,14 +61,13 @@
 
 #gradiant :nth-child(5) {
   position: absolute;
-  top: 295px;
-  left: -566px;
+  top: 19vh;
+  left: 0;
   z-index: 1;
-  width: 2446px;
-  height: 278px;
-  flex-shrink: 0;
-  border-radius: 2446px;
+  width: 100vw;
+  height: 33vh;
+  border-radius: 79.6215rem;
   background: rgba(65, 0, 148, 0.34);
   mix-blend-mode: hard-light;
-  filter: blur(139px);
-}
+  filter: blur(300px);
+} */

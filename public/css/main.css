@@ -1,7 +1,18 @@
 h1{
   color: #FFF;
   text-shadow: 0px 0px 17px rgba(255, 255, 255, 0.80);
-  font-size: 65.001px;
+  font-family: "PyeongChang Peace";
+  font-size: 4.06256rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+h3 {
+  color: #FFF;
+  text-shadow: 0px 0px 17px rgba(255, 255, 255, 0.71);
+  font-family: "PyeongChang Peace";
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -9,18 +20,13 @@ h1{
 
 main {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
 }
 
 #main-wrap {
+  position: absolute;
+  top: 40vh;
   z-index: 2;
-  width: 560px;
-  height: 720px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-content: center;
   color: white;
 }
@@ -32,8 +38,8 @@ main {
 
 
 #atag :nth-child(1) {
-  width: 25.49px;
-  height: 25.49px;
+  width: 2vw;
+  height: 3.1vh;
   flex-shrink: 0;
   fill: #FFF;
   filter: drop-shadow(2px 2px 4px rgba(255, 255, 255, 0.25));
@@ -41,15 +47,15 @@ main {
 
 #atag :nth-child(2) {
 
-  width: 26px;
-  height: 26px;
+  width: 2vw;
+  height: 3.1vh;
   flex-shrink: 0;
   fill: #FFF;
   filter: drop-shadow(2px 2px 4px rgba(255, 255, 255, 0.25));
 }
 #atag :nth-child(3) {
-  width: 25.496px;
-  height: 25.496px;
+  width: 2vw;
+  height: 3.1vh;
   flex-shrink: 0;
 
   fill: #FFF;

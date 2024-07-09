@@ -3,3 +3,12 @@ footer {
   justify-content: center;
   color: white;
 }
+
+#scroll {
+  position: absolute;
+  bottom: 3.6vh;
+  width: 2.42vw;
+  height: 2.16vh;
+  flex-shrink: 0;
+}
+ 

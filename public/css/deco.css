@@ -1,24 +1,24 @@
-#image :nth-child(1) {
+#image #mMoon {
   position: absolute;
-  top: 248px;
-  left: 806px;
+  top: 28.45vh;
+  left: 64.4vw;
   z-index: 1;
-  width: 146.089px;
-  height: 141.59px;
+  width: 11.35vw;
+  height: 17vh;
   transform: rotate(3.101deg);
   flex-shrink: 0;
   fill: radial-gradient(50% 50% at 50% 50%, #FFF 0%, #CDCDCD 100%);
   filter: drop-shadow(0px 0px 20px #FFF);
 }
 
-#image :nth-child(2) {
+#image #light {
   position: absolute;
-  top: 11px;
-  left: 16px;
+  top: 3.7vh;
+  left: 3vw;
   z-index: 1;
 
-  width: 852px;
-  height: 359.5px;
+  width: 66.74vw;
+  height: 39.5vh;
   flex-shrink: 0;
 
   fill: rgba(255, 255, 255, 0.03);

@@ -1,20 +1,32 @@
 header {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0 0 0;
+  padding: 3.6vh 0 0 0;
+  height: 3.35vh;
+  align-items: center;
 }
 
 #left-nav {
   display: flex;
-  padding: 0 0 0 18px;
+  padding: 0 0 0 2.34vw;
 }
 
 #right-nav {
   display: flex;
 }
+
 #right-nav div {
-  padding: 0 18px;
+  padding: 0 2.34vw;
 }
+
+
+#left-nav :nth-child(1) {
+  width: 1.8vw;
+  height: 2.3vh;
+  fill: rgba(217, 217, 217, 0.98);
+  box-shadow: 3px 0px 6px 0px rgba(0, 0, 0, 0.40) inset;
+}
+
 
 #left-nav :nth-child(2) {
   color: #FFF;
