@@ -11,17 +11,17 @@
   font-style: normal;
 }
 
-
-
 * {
   padding: 0;
   margin: 0;
   font-family: "PyeongChangPeace";
   font-weight: 300;
 }
+
 html {
   overflow-x: clip;
   background: #0E0E0F;
+  cursor: none;
 }
 
 a {
@@ -30,9 +30,11 @@ a {
 }
 
 .cursor {
-  transition: all 70ms;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
   position: absolute;
-  scale: 0.32;
-  z-index: -1;
-  filter: blur(14.5px);
+  z-index: 999;
+  backdrop-filter: invert(100%);
+  pointer-events: none;
 }
