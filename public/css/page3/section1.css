@@ -1,0 +1,63 @@
+#page3 {
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+
+
+#project-box {
+  width: 55vw;
+  height: 25.875rem;
+  flex-shrink: 0;
+  margin-bottom: 22px;
+
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.10);
+  display: flex;
+  justify-content: center;
+}
+
+#project-box > div {
+  display: flex;
+  
+}
+
+#project-logo {
+  width: 23vw;
+  height: 41vh;
+  background: url(https://cdn.discordapp.com/attachments/1240291019681955912/1240292985661292695/DANLAC.jpg?ex=668e8adb&is=668d395b&hm=79d396f3b7d739b39480ff2a40f3862e53a6bf813ebee6fb7fb1f33444691682&) lightgray 50% / cover no-repeat;
+
+
+}
+
+#page3 > div {
+  display: flex;
+  justify-content: center;
+}
+
+#nth1 {
+  display: flex;
+  width: 25rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#nth2 {
+  width: 25rem;
+}
+
+#nth2 > div {
+  margin-top: 32px;
+  margin-left: 32px;
+}
+
+#nth2 ul {
+  margin-top: 24px;
+}
+
+#nth2 li {
+  color: #FFF;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  }

@@ -6,6 +6,7 @@ footer {
 }
 
 #scroll {
+  z-index: 2;
   width: 2.42vw;
   height: 2.16vh;
 }
