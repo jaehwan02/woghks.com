@@ -26,9 +26,7 @@ header > div {
   margin: 0 1vw;
   border: 1px solid transparent;
   transition: all 0.25s;
-
 }
-
 
 #left-nav :nth-child(1) {
   width: 18px;
@@ -37,7 +35,6 @@ header > div {
   box-shadow: 3px 0px 6px 0px rgba(0, 0, 0, 0.40) inset;
   margin-right: 8px;
 }
-
 
 #left-nav :nth-child(2) {
   color: #FFF;
@@ -48,8 +45,8 @@ header > div {
   line-height: normal;
   letter-spacing: 0.2px;
   z-index: 1;
-
 }
+
 #right-nav div:nth-child(1):hover {
   background: white;
   border-radius: 6px;
@@ -60,7 +57,6 @@ header > div {
 #right-nav div:nth-child(1):hover a {
   color: black;
 }
-
 
 #right-nav :nth-child(2):hover {
   background: white;

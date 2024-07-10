@@ -2,7 +2,7 @@
   position: fixed;
   top: 28.45vh;
   left: 64.4vw;
-  z-index: 999;
+  z-index: -1;
   width: 11.35vw;
   /* height: 17vh; */
   transform: rotate(3.101deg);

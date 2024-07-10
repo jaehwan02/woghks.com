@@ -44,17 +44,17 @@ gsap.to("#mMoon", { //움직일 대상의 selector
       trigger: "#mMoon", // 스크롤을 감지할 대상의 selector
       start: "150% 0%", // trigger의 0% 지점과 viewport의 0% 지점이 만나면 애니메이션 시작
       end: "200% 100%", // trigger의 100% 지점과 viewport의 100% 지점이 만나면 애니메이션 종료
-      scrub: 1, // 반대로 스크롤할때도 애니메이션을 반대로 적용할지 여부
-      // markers: true, // trigger의 시작, 끝 지점을 보여줌 (디버깅용)
+      scrub: 2.3, // 반대로 스크롤할때도 애니메이션을 반대로 적용할지 여부
+      //markers: true, // trigger의 시작, 끝 지점을 보여줌 (디버깅용)
   },
   onUpdate: () => {
     console.log("애니메이션이 업데이트 중입니다.");
     adjustLight();
   },
   ease: "none", // 애니메이션의 속도 곡선
-  top: headerMoon.getBoundingClientRect().top, // 애니메이션의 속성
+  top: headerMoon.getBoundingClientRect().top+10, // 애니메이션의 속성
   left: headerMoon.getBoundingClientRect().left, // 애니메이션의 속성
-  width : headerMoon.getBoundingClientRect().width,
+  width : headerMoon.getBoundingClientRect().width-9,
   // height: headerMoon.getBoundingClientRect().height,
   // position: "fixed",
   rotate: "26deg",
@@ -63,7 +63,7 @@ gsap.to("#mMoon", { //움직일 대상의 selector
 gsap.to("#light2", {
   scrollTrigger:{
       trigger: "#mMoon", // 스크롤을 감지할 대상의 selector
-      start: "150% 0%", // trigger의 0% 지점과 viewport의 0% 지점이 만나면 애니메이션 시작
+      start: "300% 0%", // trigger의 0% 지점과 viewport의 0% 지점이 만나면 애니메이션 시작
       end: "200% 100%", // trigger의 100% 지점과 viewport의 100% 지점이 만나면 애니메이션 종료
       scrub: 1, // 반대로 스크롤할때도 애니메이션을 반대로 적용할지 여부
       //markers: true, // trigger의 시작, 끝 지점을 보여줌 (디버깅용)    

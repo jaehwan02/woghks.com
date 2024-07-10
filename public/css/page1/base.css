@@ -21,7 +21,7 @@
 html {
   overflow-x: clip;
   background: #0E0E0F;
-  cursor: none;
+  /* cursor: none; */
 }
 
 a {
