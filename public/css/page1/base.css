@@ -28,3 +28,11 @@ a {
   text-decoration: none;
   color: white;
 }
+
+.cursor {
+  transition: all 70ms;
+  position: absolute;
+  scale: 0.32;
+  z-index: -1;
+  filter: blur(14.5px);
+}
