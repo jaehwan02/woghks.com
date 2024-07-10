@@ -16,6 +16,9 @@
 
   <link rel="stylesheet" href="css/page3/section1.css">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+
 </head>
 
 <body>
@@ -56,6 +59,7 @@
     <div id="image">
       <img src="svg/mMoon.svg" id="mMoon">
       <img src="svg/light.svg" id="light">
+      <img src="svg/light2.svg" id="light2">
     </div>
 
     <div id="gradiant">
@@ -143,14 +147,15 @@
 </html>
 
 <script>
+  const moon = document.getElementById('mMoon');
+  const light = document.getElementById('light');
+  const headerMoon = document.querySelector("#left-nav > div:nth-child(1) > img");
+
   var startX;
   var startY;
 
   function adjustLight() {
     console.log("adjust");
-    const moon = document.getElementById('mMoon');
-    const light = document.getElementById('light');
-    const headerMoon = document.querySelector("#left-nav > div:nth-child(1) > img");
 
     const headerMoonRect = headerMoon.getBoundingClientRect();
     const lightRect = light.getBoundingClientRect();
@@ -180,6 +185,59 @@
 
   window.addEventListener('resize', adjustLight);
   window.addEventListener('load', adjustLight);
+
+  document.addEventListener("scroll", adjustLight)
+
+  // gsap.to("#mMoon", { //움직일 대상의 selector
+  //   scrollTrigger: {
+  //       trigger: "#mMoon", // 스크롤을 감지할 대상의 selector
+  //       start: "0% 20%", // trigger의 0% 지점과 viewport의 0% 지점이 만나면 애니메이션 시작
+  //       end: "100% 100%", // trigger의 100% 지점과 viewport의 100% 지점이 만나면 애니메이션 종료
+  //       scrub: 1, // 반대로 스크롤할때도 애니메이션을 반대로 적용할지 여부
+  //       markers: true, // trigger의 시작, 끝 지점을 보여줌 (디버깅용)
+  //   },
+  //   onUpdate: () => {
+  //     console.log("애니메이션이 업데이트 중입니다.");
+  //     adjustLight();
+  //   },
+
+  //   ease: "power1.out", // 애니메이션의 속도 곡선
+  //   top: "50%", // 애니메이션의 속성
+  //   left: "50%", // 애니메이션의 속성
+  //   // transform: "translate(-50%, -50%)", // 애니메이션의 속성
+  // });
+  gsap.to("#mMoon", { //움직일 대상의 selector
+    scrollTrigger: {
+        trigger: "#mMoon", // 스크롤을 감지할 대상의 selector
+        start: "150% 0%", // trigger의 0% 지점과 viewport의 0% 지점이 만나면 애니메이션 시작
+        end: "200% 100%", // trigger의 100% 지점과 viewport의 100% 지점이 만나면 애니메이션 종료
+        scrub: 1, // 반대로 스크롤할때도 애니메이션을 반대로 적용할지 여부
+        // markers: true, // trigger의 시작, 끝 지점을 보여줌 (디버깅용)
+    },
+    onUpdate: () => {
+      console.log("애니메이션이 업데이트 중입니다.");
+      adjustLight();
+    },
+    ease: "none", // 애니메이션의 속도 곡선
+    top: headerMoon.getBoundingClientRect().top, // 애니메이션의 속성
+    left: headerMoon.getBoundingClientRect().left, // 애니메이션의 속성
+    width : headerMoon.getBoundingClientRect().width,
+    // height: headerMoon.getBoundingClientRect().height,
+    // position: "fixed",
+    rotate: "26deg",
+  });
+
+  gsap.to("#light2", {
+    scrollTrigger:{
+        trigger: "#mMoon", // 스크롤을 감지할 대상의 selector
+        start: "150% 0%", // trigger의 0% 지점과 viewport의 0% 지점이 만나면 애니메이션 시작
+        end: "200% 100%", // trigger의 100% 지점과 viewport의 100% 지점이 만나면 애니메이션 종료
+        scrub: 1, // 반대로 스크롤할때도 애니메이션을 반대로 적용할지 여부
+        markers: true, // trigger의 시작, 끝 지점을 보여줌 (디버깅용)    
+      },
+      opacity: 1,
+  })
+
 </script>
 
 
