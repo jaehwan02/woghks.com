@@ -38,3 +38,7 @@ a {
   backdrop-filter: invert(100%);
   pointer-events: none;
 }
+
+body {
+  overflow-x: hidden;
+}
