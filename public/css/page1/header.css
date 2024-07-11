@@ -31,8 +31,6 @@ header > div {
 #left-nav :nth-child(1) {
   width: 18px;
   height: 20px;
-  fill: rgba(217, 217, 217, 0.98);
-  box-shadow: 3px 0px 6px 0px rgba(0, 0, 0, 0.40) inset;
   margin-right: 8px;
 }
 

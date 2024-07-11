@@ -24,7 +24,7 @@
 #project-logo {
   width: 23vw;
   height: 41vh;
-  background: url(https://cdn.discordapp.com/attachments/1240291019681955912/1240292985661292695/DANLAC.jpg?ex=668e8adb&is=668d395b&hm=79d396f3b7d739b39480ff2a40f3862e53a6bf813ebee6fb7fb1f33444691682&) lightgray 50% / cover no-repeat;
+  background: url("#") lightgray 50% / cover no-repeat;
 
 
 }

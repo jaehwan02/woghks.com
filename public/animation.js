@@ -111,3 +111,14 @@ gsap.fromTo(
       },
   }
 );
+
+gsap.to("#sMoon", {
+  filter: "drop-shadow(0px 0px 5px #FFF)",
+  scrollTrigger: {
+    trigger: "#mMoon",
+    start: "410% 0%", // trigger의 0% 지점과 viewport의 0% 지점이 만나면 애니메이션 시작
+    end: "200% 100%", // #sMoon 요소의 하단이 뷰포트의 20% 위치에 도달할 때 애니메이션 끝
+    //markers: true, // 스크롤 트리거 위치 표시
+    toggleActions: "play none none reverse" // 스크롤 방향에 따라 애니메이션 제어
+  }
+});
