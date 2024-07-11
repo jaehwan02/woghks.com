@@ -1,0 +1,12 @@
+#aheader {
+  margin-bottom: 200px;
+}
+
+#hello {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  margin-top: 200px;
+}

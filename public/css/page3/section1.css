@@ -24,9 +24,13 @@
 #project-logo {
   width: 23vw;
   height: 41vh;
-  background: url("#") lightgray 50% / cover no-repeat;
+  background: url("https://cdn.discordapp.com/attachments/1240291019681955912/1240292985661292695/DANLAC.jpg?ex=6690851b&is=668f339b&hm=fb9252e51d4810f2554ad7f9900c32b1474f174194eebfefa9e32d4aca6433a3&") lightgray 50% / cover no-repeat;
+}
 
-
+#project-logo2 {
+  width: 23vw;
+  height: 41vh;
+  background: url("https://cdn.discordapp.com/attachments/1240237874377654335/1260919429622136923/p_1IEyQ8rYenO9YgAFp_LHIAW46kn6DXT0VKmZ_jKNijvYth9DieYZuJX_E_H_4GkCER_sVKhMqSyQYoW94JKA.png?ex=6691123a&is=668fc0ba&hm=34ed3586dd1efd2c2ed42b90f29e3e6335147c3768def6c936386eae05c52d6f&") lightgray 50% / cover no-repeat;
 }
 
 #page3 > div {
