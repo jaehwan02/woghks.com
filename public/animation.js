@@ -53,8 +53,8 @@ gsap.to("#mMoon", { //움직일 대상의 selector
   },
   ease: "none", // 애니메이션의 속도 곡선
   top: headerMoon.getBoundingClientRect().top+10, // 애니메이션의 속성
-  left: headerMoon.getBoundingClientRect().left, // 애니메이션의 속성
-  width : headerMoon.getBoundingClientRect().width-9,
+  left: headerMoon.getBoundingClientRect().left+3, // 애니메이션의 속성
+  width : headerMoon.getBoundingClientRect().width-11,
   // height: headerMoon.getBoundingClientRect().height,
   // position: "fixed",
   rotate: "26deg",
