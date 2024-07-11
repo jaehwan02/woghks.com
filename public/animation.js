@@ -122,3 +122,33 @@ gsap.to("#sMoon", {
     toggleActions: "play none none reverse" // 스크롤 방향에 따라 애니메이션 제어
   }
 });
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+    // 가로 스크롤 애니메이션
+    gsap.to("#page4", {
+      xPercent: -300, // 전체 너비에서 200%를 뺀 값으로 이동 (3개의 섹션이므로 200%)
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#page4",
+        pin: true,
+        scrub: 1,
+        end: () => "+=" + document.querySelector("#page4").offsetWidth, // 컨테이너의 전체 너비만큼 스크롤
+        //markers: true // 스크롤 트리거 위치 표시
+      }
+    });
+
+    // 원 크기 및 위치 애니메이션
+    gsap.to("#circle", {
+      x: -window.innerWidth + 50, // 원이 오른쪽에서 왼쪽으로 이동
+      scale: 1000, // 원의 크기를 5배로 키움
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#page4",
+        start: "top top",
+        end: () => "+=" + document.querySelector("#page4").offsetWidth, // 컨테이너의 전체 너비만큼 스크롤
+        scrub: 1,
+        //markers: true // 스크롤 트리거 위치 표시
+      }
+    });

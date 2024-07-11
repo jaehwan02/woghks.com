@@ -19,7 +19,7 @@
 }
 
 html {
-  overflow-x: clip;
+  /* overflow-x: clip; */
   background: #0E0E0F;
   /* cursor: none; */
 }
@@ -37,8 +37,4 @@ a {
   z-index: 999;
   backdrop-filter: invert(100%);
   pointer-events: none;
-}
-
-body {
-  overflow-x: hidden;
 }

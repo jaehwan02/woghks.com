@@ -1,6 +1,19 @@
-.circle {
-  width: 30px;
-  height: 30px;
-  flex-shrink: 0;
-  fill: #fff;
+body {
+  overflow-x: hidden;
+}
+#page4 {
+  width: 100vw; /* 가로로 3배 길이를 주어야 3개의 섹션이 가로로 배치됨 */
+  height: 100vh;
+  position: relative;
+}
+#circle {
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  right: -1vw; /* 시작 위치를 오른쪽 바깥으로 설정 */
+  transform: translateY(-50%);
+  z-index: -1;
 }
