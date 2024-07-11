@@ -4,8 +4,8 @@
 }
 
 
-#project-box {
-  width: 55vw;
+.project-box {
+  width: 800px;
   height: 25.875rem;
   flex-shrink: 0;
   margin-bottom: 22px;
@@ -16,21 +16,15 @@
   justify-content: center;
 }
 
-#project-box > div {
+.project-box > div {
   display: flex;
-  
+  justify-content: center;
+  align-items: center;
 }
 
-#project-logo {
-  width: 23vw;
-  height: 41vh;
-  background: url("https://cdn.discordapp.com/attachments/1240291019681955912/1240292985661292695/DANLAC.jpg?ex=6690851b&is=668f339b&hm=fb9252e51d4810f2554ad7f9900c32b1474f174194eebfefa9e32d4aca6433a3&") lightgray 50% / cover no-repeat;
-}
-
-#project-logo2 {
-  width: 23vw;
-  height: 41vh;
-  background: url("https://cdn.discordapp.com/attachments/1240237874377654335/1260919429622136923/p_1IEyQ8rYenO9YgAFp_LHIAW46kn6DXT0VKmZ_jKNijvYth9DieYZuJX_E_H_4GkCER_sVKhMqSyQYoW94JKA.png?ex=6691123a&is=668fc0ba&hm=34ed3586dd1efd2c2ed42b90f29e3e6335147c3768def6c936386eae05c52d6f&") lightgray 50% / cover no-repeat;
+.project-logo {
+  width: 346px;
+  height: 346px;
 }
 
 #page3 > div {
@@ -38,27 +32,27 @@
   justify-content: center;
 }
 
-#nth1 {
+.nth1 {
   display: flex;
   width: 25rem;
   align-items: center;
   justify-content: center;
 }
 
-#nth2 {
+.nth2 {
   width: 25rem;
 }
 
-#nth2 > div {
-  margin-top: 32px;
+.nth2 > div {
   margin-left: 32px;
+  margin-top: 5px;
 }
 
-#nth2 ul {
+.nth2 ul {
   margin-top: 24px;
 }
 
-#nth2 li {
+.nth2 li {
   color: #FFF;
   font-size: 0.875rem;
   font-style: normal;
