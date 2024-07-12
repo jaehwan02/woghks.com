@@ -2,9 +2,22 @@ body {
   overflow-x: hidden;
 }
 #page4 {
-  width: 100vw; /* 가로로 3배 길이를 주어야 3개의 섹션이 가로로 배치됨 */
+  display: flex;
+  width: 70vw; /* 가로로 3배 길이를 주어야 3개의 섹션이 가로로 배치됨 */
   height: 100vh;
   position: relative;
+}
+
+.section {
+  flex: 1;
+  min-width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section:nth-child(4) {
+  background-color: transparent;
 }
 #circle {
   width: 3px;
@@ -16,4 +29,63 @@ body {
   right: -1vw; /* 시작 위치를 오른쪽 바깥으로 설정 */
   transform: translateY(-50%);
   z-index: -1;
+}
+
+.container2 {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.me-header {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.profile {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.profile-left {
+  width: 45vw;
+}
+.profile-right {
+  width: 50vw;
+}
+.tech-stack {
+  margin-top: 20px;
+}
+.tech-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.tech-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.progress {
+  flex: 1;
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.progress-bar {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 5px;
+  width: 0;
+  transition: width 2s;
+  position: relative;
+}
+.progress-percentage {
+  position: absolute;
+  top: -2px;
+  font-size: 14px;
 }

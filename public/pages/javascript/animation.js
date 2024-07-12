@@ -128,7 +128,7 @@ gsap.to('#page4', {
     pin: true,
     scrub: 1,
     end: () => '+=' + document.querySelector('#page4').offsetWidth, // 컨테이너의 전체 너비만큼 스크롤
-    //markers: true // 스크롤 트리거 위치 표시
+    markers: true, // 스크롤 트리거 위치 표시
   },
 });
 
