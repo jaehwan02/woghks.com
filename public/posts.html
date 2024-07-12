@@ -1,108 +1,147 @@
 <!DOCTYPE html>
 <html lang="ko" onclick="check()" onmousemove="check()">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이재환의 기록 보관소</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이재환의 기록 보관소</title>
 
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-  <link rel="stylesheet" href="css/project/project.css">
+    <link rel="stylesheet" href="css/project/project.css" />
 
-  <link rel="stylesheet" href="css/page1/base.css">
-  <link rel="stylesheet" href="css/page1/deco.css">
-  <link rel="stylesheet" href="css/page1/footer.css">
-  <link rel="stylesheet" href="css/page1/gradiant.css">
-  <link rel="stylesheet" href="css/page1/header.css">
-  <link rel="stylesheet" href="css/page1/main.css">
+    <link rel="stylesheet" href="css/page1/base.css" />
+    <link rel="stylesheet" href="css/page1/deco.css" />
+    <link rel="stylesheet" href="css/page1/footer.css" />
+    <link rel="stylesheet" href="css/page1/gradiant.css" />
+    <link rel="stylesheet" href="css/page1/header.css" />
+    <link rel="stylesheet" href="css/page1/main.css" />
 
-  <link rel="stylesheet" href="css/page2/section.css">
+    <link rel="stylesheet" href="css/page2/section.css" />
 
-  <link rel="stylesheet" href="css/page3/section1.css">
+    <link rel="stylesheet" href="css/page3/section1.css" />
 
-  <link rel="stylesheet" href="css/page4/circle.css">
+    <link rel="stylesheet" href="css/page4/circle.css" />
 
+    <link rel="stylesheet" href="styles.css" />
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-</head>
-<body>
-  <header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <header>
       <div>
         <div id="left-nav">
-          <div><img src="svg/sMoon.svg" alt="달" id="sMoon"></div>
+          <div><img src="svg/sMoon.svg" alt="달" id="sMoon" /></div>
           <div><a href="index.html">Jaehwan</a></div>
         </div>
         <div id="right-nav">
+          <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search..." />
+            <button type="submit">
+              <img src="svg/search.svg" alt="Search Icon" />
+            </button>
+          </form>
+
           <div><a href="posts.html">Posts</a></div>
           <div><a href="projects.html">Projects</a></div>
           <div><a href="#">About me</a></div>
         </div>
-       </div> 
+      </div>
     </header>
 
-    <div id="hello">
-      <section id="posts">
-        <div class="title"><h2>Posts</h2></div>
-        <div>
-          <div class="block">
-            <div></div>
-            <h3>Proxmox VM 생성하기</h3>
-            <p>24시간 돌아가는 나만의 서버!</p>
-          </div>
-
-          <div class="block">
-            <div></div>
-            <h3>가상화 OS Proxmox 설치하기</h3>
-            <p>24시간 돌아가는 나만의 서버!</p>
-          </div>
-
-          <div class="block">
-            <div></div>
-            <h3>우분투 CD 미러서버 구축하기</h3>
-            <p>미러서버를 구축하고 공식 미러로 등록해보자!</p>
-          </div>
-          <div class="block">
-            <div></div>
-            <h3>Proxmox VM 생성하기</h3>
-            <p>24시간 돌아가는 나만의 서버!</p>
-          </div>
-
-          <div class="block">
-            <div></div>
-            <h3>가상화 OS Proxmox 설치하기</h3>
-            <p>24시간 돌아가는 나만의 서버!</p>
-          </div>
-
-          <div class="block">
-            <div></div>
-            <h3>우분투 CD 미러서버 구축하기</h3>
-            <p>미러서버를 구축하고 공식 미러로 등록해보자!</p>
-          </div>
-          <div class="block">
-            <div></div>
-            <h3>Proxmox VM 생성하기</h3>
-            <p>24시간 돌아가는 나만의 서버!</p>
-          </div>
-
-          <div class="block">
-            <div></div>
-            <h3>가상화 OS Proxmox 설치하기</h3>
-            <p>24시간 돌아가는 나만의 서버!</p>
-          </div>
-
-          <div class="block">
-            <div></div>
-            <h3>우분투 CD 미러서버 구축하기</h3>
-            <p>미러서버를 구축하고 공식 미러로 등록해보자!</p>
-          </div>
-        </div>
-      </section>
-    </div>
+    <div id="hello"><div id="search-results"></div></div>
     <div class="cursor"></div>
-</body>
+
+    <script>
+      const articles = [
+        {
+          title: 'GSAP를 이용한 애니메이션',
+          content: 'GSAP는 강력한 애니메이션 라이브러리로 다양한 효과를 줄 수 있습니다.',
+          link: 'articles/article-gsap.html',
+        },
+        {
+          title: '자바스크립트 기초',
+          content: '자바스크립트는 웹 개발에 필수적인 프로그래밍 언어입니다.',
+          link: 'articles/article-js.html',
+        },
+        {
+          title: 'HTML5의 새로운 기능들',
+          content: 'HTML5는 웹 개발에 많은 새로운 기능들을 추가했습니다.',
+          link: 'articles/article-html5.html',
+        },
+        {
+          title: 'CSS 기초',
+          content: 'CSS는 Cascading Style Sheets의 약자로, 웹 페이지의 스타일을 지정하는 데 사용됩니다.',
+          link: 'articles/article-css.html',
+        },
+        {
+          title: 'React를 이용한 웹 개발',
+          content: 'React는 Facebook에서 개발한 자바스크립트 라이브러리로, 사용자 인터페이스를 구축하는 데 사용됩니다.',
+          link: 'articles/article-react.html',
+        },
+        {
+          title: 'Node.js로 서버 개발하기',
+          content: 'Node.js는 서버 사이드에서 자바스크립트를 실행할 수 있게 하는 런타임 환경입니다.',
+          link: 'articles/article-node.html',
+        },
+        {
+          title: 'Python 기초',
+          content: 'Python은 다양한 용도로 사용되는 고수준 프로그래밍 언어입니다.',
+          link: 'articles/article-python.html',
+        },
+        {
+          title: 'Django로 웹 개발하기',
+          content: 'Django는 Python 기반의 웹 프레임워크로, 신속한 웹 개발을 지원합니다.',
+          link: 'articles/article-django.html',
+        },
+        {
+          title: 'Vue.js로 프론트엔드 개발하기',
+          content: 'Vue.js는 사용자 인터페이스를 구축하기 위한 프로그레시브 자바스크립트 프레임워크입니다.',
+          link: 'articles/article-vue.html',
+        },
+      ];
+
+      function performSearch(query) {
+        const resultsContainer = document.getElementById('search-results');
+        resultsContainer.innerHTML = '';
+
+        let resultsFound = false;
+
+        articles.forEach((article) => {
+          const title = article.title.toLowerCase();
+          const content = article.content.toLowerCase();
+
+          if (!query || title.includes(query) || content.includes(query)) {
+            resultsContainer.innerHTML += `
+                        <div class="result">
+                            <h3><a href="${article.link}">${article.title}</a></h3>
+                            <p>${article.content}</p>
+                        </div>
+                    `;
+            resultsFound = true;
+          }
+        });
+
+        if (!resultsFound) {
+          resultsContainer.innerHTML = '<p>검색 결과가 없습니다.</p>';
+        }
+      }
+
+      document.getElementById('search-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const query = document.getElementById('search-input').value.toLowerCase();
+        performSearch(query);
+      });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const query = localStorage.getItem('searchQuery')?.toLowerCase() || '';
+        document.getElementById('search-input').value = query;
+        performSearch(query);
+      });
+    </script>
+  </body>
 </html>
 
 <script src="./cursor.js"></script>

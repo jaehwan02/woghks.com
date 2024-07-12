@@ -1,0 +1,91 @@
+body {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  height: 200vh;
+}
+
+.container {
+  text-align: center;
+  width: 80%;
+  max-width: 800px;
+}
+
+header {
+  top: 0;
+  left: 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+main h2 {
+  font-size: 1.5em;
+}
+
+#search-form {
+  display: flex;
+  margin-right: 230px;
+}
+
+#search-input {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  background-color: #333;
+  color: #fff;
+}
+
+#search-form button {
+  padding: 0 10px;
+  border: solid 1px;
+  border-radius: 0 4px 4px 0;
+  background-color: white;
+  cursor: pointer;
+}
+
+#search-form button img {
+  width: 16px;
+  height: 16px;
+}
+
+#search-results {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.result {
+  border: 1px solid transparent;
+  width: 750px;
+  padding: 30px 25px;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.25s;
+}
+.result h3 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.result p {
+  color: #fff;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+#search-results > div:hover {
+  border-radius: 6px;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 5px 0px #fff;
+}

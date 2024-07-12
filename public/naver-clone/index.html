@@ -1,152 +1,183 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
-  <title>NAVER</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <title>NAVER</title>
 
-  <style>
+    <style>
+      :root {
+        --color_title: #080808;
+        --color_title_rgb: 8, 8, 8;
+        --color_body: #101010;
+        --color_body_rgb: 16, 16, 16;
+        --color_caption1: #404040;
+        --color_caption1_rgb: 64, 64, 64;
+        --color_caption2: #606060;
+        --color_caption2_rgb: 96, 96, 96;
+        --color_caption3: #555558;
+        --color_caption3_rgb: 85, 85, 88;
+        --color_search: #000;
+        --color_search_rgb: 0, 0, 0;
+        --color_border_out: #e3e5e8;
+        --color_border_out_rgb: 227, 229, 232;
+        --color_border_in: #ebebeb;
+        --color_border_in_rgb: 235, 235, 235;
+        --color_border_in_divider: #ebebeb;
+        --color_border_in_divider_rgb: 235, 235, 235;
+        --color_border_in_exception: #ebebeb;
+        --color_border_in_exception_rgb: 235, 235, 235;
+        --color_button_border: #dadcdf;
+        --color_button_border_rgb: 218, 220, 223;
+        --color_dot_divider: #d3d5d7;
+        --color_dot_divider_rgb: 211, 213, 215;
+        --color_block_bg: #fff;
+        --color_block_bg_rgb: 255, 255, 255;
+        --color_board_bg: #f4f6fa;
+        --color_board_bg_rgb: 244, 246, 250;
+        --color_option_bg: #f5f7f8;
+        --color_option_bg_rgb: 245, 247, 248;
+        --color_login_bg: #fafbfb;
+        --color_login_bg_rgb: 250, 251, 251;
+        --color_menu_widget_bg: #fff;
+        --color_menu_widget_bg_rgb: 255, 255, 255;
+        --color_setting_bg: #fff;
+        --color_setting_bg_rgb: 255, 255, 255;
+        --color_button1_bg: #fff;
+        --color_button1_bg_rgb: 255, 255, 255;
+        --color_button2_bg: #fff;
+        --color_button2_bg_rgb: 255, 255, 255;
+        --color_news: #3a67ea;
+        --color_news_rgb: 58, 103, 234;
+        --color_news_econ_stay: #909aab;
+        --color_news_econ_stay_rgb: 144, 154, 171;
+        --color_news_econ_down: #4f67d6;
+        --color_news_econ_down_rgb: 79, 103, 214;
+        --color_live_news_price: #f4361e;
+        --color_live_news_price_rgb: 244, 54, 30;
+        --color_enter: #e538e2;
+        --color_enter_rgb: 229, 56, 226;
+      }
 
-    :root {
-      --color_title: #080808;
-      --color_title_rgb: 8, 8, 8;
-      --color_body: #101010;
-      --color_body_rgb: 16, 16, 16;
-      --color_caption1: #404040;
-      --color_caption1_rgb: 64, 64, 64;
-      --color_caption2: #606060;
-      --color_caption2_rgb: 96, 96, 96;
-      --color_caption3: #555558;
-      --color_caption3_rgb: 85, 85, 88;
-      --color_search: #000;
-      --color_search_rgb: 0, 0, 0;
-      --color_border_out: #e3e5e8;
-      --color_border_out_rgb: 227, 229, 232;
-      --color_border_in: #ebebeb;
-      --color_border_in_rgb: 235, 235, 235;
-      --color_border_in_divider: #ebebeb;
-      --color_border_in_divider_rgb: 235, 235, 235;
-      --color_border_in_exception: #ebebeb;
-      --color_border_in_exception_rgb: 235, 235, 235;
-      --color_button_border: #dadcdf;
-      --color_button_border_rgb: 218, 220, 223;
-      --color_dot_divider: #d3d5d7;
-      --color_dot_divider_rgb: 211, 213, 215;
-      --color_block_bg: #fff;
-      --color_block_bg_rgb: 255, 255, 255;
-      --color_board_bg: #f4f6fa;
-      --color_board_bg_rgb: 244, 246, 250;
-      --color_option_bg: #f5f7f8;
-      --color_option_bg_rgb: 245, 247, 248;
-      --color_login_bg: #fafbfb;
-      --color_login_bg_rgb: 250, 251, 251;
-      --color_menu_widget_bg: #fff;
-      --color_menu_widget_bg_rgb: 255, 255, 255;
-      --color_setting_bg: #fff;
-      --color_setting_bg_rgb: 255, 255, 255;
-      --color_button1_bg: #fff;
-      --color_button1_bg_rgb: 255, 255, 255;
-      --color_button2_bg: #fff;
-      --color_button2_bg_rgb: 255, 255, 255;
-      --color_news: #3a67ea;
-      --color_news_rgb: 58, 103, 234;
-      --color_news_econ_stay: #909aab;
-      --color_news_econ_stay_rgb: 144, 154, 171;
-      --color_news_econ_down: #4f67d6;
-      --color_news_econ_down_rgb: 79, 103, 214;
-      --color_live_news_price: #f4361e;
-      --color_live_news_price_rgb: 244, 54, 30;
-      --color_enter: #e538e2;
-      --color_enter_rgb: 229, 56, 226;
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    * {
-      box-sizing: border-box;
-    }
+      html,
+      body {
+        font-size: 10.5px;
+        line-height: 10.5px;
+        margin: 0;
+        padding: 0;
+        letter-spacing: -0.4px;
+        font-family: -apple-system;
+      }
+      form,
+      ul {
+        padding: 0;
+        margin: 0;
+      }
 
-    html, body {
-      font-size: 10.5px;
-      line-height: 10.5px;
-      margin: 0;
-      padding: 0;
-      letter-spacing: -0.4px;
-      font-family: -apple-system;
-    }
-    form, ul {
-      padding: 0;
-      margin: 0;
-    }
+      #wrap {
+        text-align: center;
+      }
 
+      #wrap-center {
+        display: inline-block;
+        width: 1280px;
+        background-color: white;
+      }
 
-    #wrap {
-      text-align: center;
-    }
+      #header {
+        text-align: left;
+        position: relative;
+        height: 52px;
+      }
 
-    #wrap-center {
-      display: inline-block;
-      width: 1280px;
-      background-color: white;
-    }
+      #header-hamburger,
+      #header-naverpay,
+      #header-navertalk,
+      #header-notice,
+      #header-basket {
+        position: absolute;
+        top: 5px;
+        padding: 8px;
+        display: inline-block;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
 
-    #header {
-      text-align: left;
-      position: relative;
-      height: 52px;
-    }
+      #header-hamburger:hover::before,
+      #header-naverpay:hover::before,
+      #header-navertalk:hover::before,
+      #header-notice:hover::before,
+      #header-basket:hover::before {
+        position: absolute;
+        content: '';
+        left: 0px;
+        top: 0px;
+        z-index: 0;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: #e7eced;
+      }
 
-    #header-hamburger, #header-naverpay, #header-navertalk, #header-notice, #header-basket {
-      position: absolute;
-      top: 5px;
-      padding: 8px;
-      display: inline-block;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
+      #header-hamburger > div,
+      #header-naverpay > div,
+      #header-navertalk > div,
+      #header-notice > div,
+      #header-basket > div {
+        position: relative;
+        background-size: 442px 434px;
+        background-repeat: no-repeat;
+        background-image: url(./sp_main.png);
+        z-index: 1;
+        width: 32px;
+        height: 32px;
+      }
 
-    #header-hamburger:hover::before, #header-naverpay:hover::before, #header-navertalk:hover::before, #header-notice:hover::before, #header-basket:hover::before {
-      position: absolute;
-      content: '';
-      left: 0px;
-      top: 0px;
-      z-index: 0;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background-color: #e7eced;
-    }
+      #header-hamburger {
+        left: -12px;
+      }
+      #header-hamburger > div {
+        background-position: -326px -161px;
+      }
+      #header-naverpay {
+        left: 41px;
+      }
+      #header-naverpay > div {
+        background-position: -285px -41px;
+      }
+      #header-navertalk {
+        right: 94px;
+      }
+      #header-navertalk > div {
+        background-position: -285px -173px;
+      }
+      #header-notice {
+        right: 42px;
+      }
+      #header-notice > div {
+        background-position: -326px -227px;
+      }
+      #header-basket {
+        right: -10px;
+      }
+      #header-basket > div {
+        background-position: -285px -107px;
+      }
 
-    #header-hamburger > div, #header-naverpay > div, #header-navertalk > div, #header-notice > div, #header-basket > div {
-      position: relative;
-      background-size: 442px 434px;
-      background-repeat: no-repeat;
-      background-image: url(./sp_main.png);
-      z-index: 1;
-      width: 32px;
-      height: 32px;
-    }
-
-    #header-hamburger {left: -12px;}
-    #header-hamburger > div {background-position: -326px -161px;}
-    #header-naverpay {left: 41px;}
-    #header-naverpay > div {background-position: -285px -41px;}
-    #header-navertalk {right: 94px;}
-    #header-navertalk > div {background-position: -285px -173px;}
-    #header-notice {right: 42px;}
-    #header-notice > div {background-position: -326px -227px;}
-    #header-basket {right: -10px;}
-    #header-basket > div {background-position: -285px -107px;}
-
-    #main {
-      width: 1340px;
-      height: 2000px;
-    }
-
-  </style>
-</head>
-<body>
-  <div id = "wrap">
+      #main {
+        width: 1340px;
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
       <div id="wrap-center">
         <div id="header">
           <button id="header-hamburger">
@@ -177,7 +208,7 @@
           }
 
           #search > form:hover {
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
           }
 
           #search-svg {
@@ -221,14 +252,16 @@
             align-items: stretch;
           }
 
-          #search-keyboard, #search-recent, #search-button {
+          #search-keyboard,
+          #search-recent,
+          #search-button {
             background: transparent;
             border: none;
             cursor: pointer;
           }
 
           #search-keyboard::before {
-            content: "";
+            content: '';
             display: block;
             background-image: url(https://pm.pstatic.net/resources/asset/sp_main.712d35ae.png);
             background-size: 442px 434px;
@@ -243,7 +276,7 @@
           }
 
           #search-recent::before {
-            content: "";
+            content: '';
             display: block;
             background-image: url(https://pm.pstatic.net/resources/asset/sp_main.712d35ae.png);
             background-size: 442px 434px;
@@ -258,7 +291,7 @@
           }
 
           #search-button::before {
-            content: "";
+            content: '';
             display: block;
             background-image: url(./sp_main.png);
             background-size: 442px 434px;
@@ -272,9 +305,11 @@
         <div id="search">
           <form action="">
             <a id="search-svg" href="#">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path></svg>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path>
+              </svg>
             </a>
-            <input id="search-input" type="text" placeholder="검색어를 입력하세요."/>
+            <input id="search-input" type="text" placeholder="검색어를 입력하세요." />
             <div id="search-right">
               <button href="#" id="search-keyboard"></button>
               <button href="#" id="search-recent"></button>
@@ -307,7 +342,7 @@
           }
 
           #nav a div::before {
-            content: "";
+            content: '';
             position: absolute;
             top: -1px;
             left: -3px;
@@ -319,8 +354,8 @@
             height: 50px;
           }
 
-          #nav a footer {   
-            content: "";
+          #nav a footer {
+            content: '';
             display: block;
             background-image: url(https://pm.pstatic.net/resources/asset/sp_main.e0b0b60f.png);
             background-size: 458px 444px;
@@ -331,16 +366,14 @@
             z-index: 1;
             margin-left: 5px;
             margin-bottom: -1 px;
-        }
+          }
 
-
-        #chichi img{
-          margin-top: 3px;
-        }
-
+          #chichi img {
+            margin-top: 3px;
+          }
 
           #nav a div::after {
-            content: "";
+            content: '';
             background-image: url(https://pm.pstatic.net/resources/asset/sp_main.712d35ae.png);
             background-size: 442px 434px;
             background-repeat: no-repeat;
@@ -350,7 +383,6 @@
             z-index: 1;
             margin: 2px;
           }
-
 
           #nav a:visited {
             color: black;
@@ -365,13 +397,27 @@
             margin-left: 0px;
           }
 
-          #nav li:nth-of-type(1) a div::after {background-position: -244px -41px;}
-          #nav li:nth-of-type(2) a div::after {background-position: -86px -184px;}
-          #nav li:nth-of-type(3) a div::after {background-position: -45px -184px;}
-          #nav li:nth-of-type(4) {margin-left: 2px;}
-          #nav li:nth-of-type(4) a div::after {background-position: -164px -229px;}
-          #nav li:nth-of-type(5) a div::after {background-position: -82px -229px;}
-          #nav li:nth-of-type(5) {margin-left: 1px;}
+          #nav li:nth-of-type(1) a div::after {
+            background-position: -244px -41px;
+          }
+          #nav li:nth-of-type(2) a div::after {
+            background-position: -86px -184px;
+          }
+          #nav li:nth-of-type(3) a div::after {
+            background-position: -45px -184px;
+          }
+          #nav li:nth-of-type(4) {
+            margin-left: 2px;
+          }
+          #nav li:nth-of-type(4) a div::after {
+            background-position: -164px -229px;
+          }
+          #nav li:nth-of-type(5) a div::after {
+            background-position: -82px -229px;
+          }
+          #nav li:nth-of-type(5) {
+            margin-left: 1px;
+          }
           #nav li:nth-of-type(6) a div::after {
             background-image: url(./sp_main1.png);
             background-size: 458px 444px;
@@ -382,17 +428,28 @@
             background-size: 458px 444px;
             background-position: -123px -229px;
           }
-          #nav li:nth-of-type(7) {margin-left: 1px;}
-          #nav li:nth-of-type(8) {margin-left: 1px;}
-          #nav li:nth-of-type(8) a div::after {background-position: -244px -82px;}
-          #nav li:nth-of-type(9) a div::after {background-position: -285px 0px;}
-          #nav li:nth-of-type(9) {margin-left: 2px;}
-          #nav li:nth-of-type(11) {margin-left: 2px;}
-          #nav li:nth-of-type(11) a div::after {background-position: -41px -229px;}
+          #nav li:nth-of-type(7) {
+            margin-left: 1px;
+          }
+          #nav li:nth-of-type(8) {
+            margin-left: 1px;
+          }
+          #nav li:nth-of-type(8) a div::after {
+            background-position: -244px -82px;
+          }
+          #nav li:nth-of-type(9) a div::after {
+            background-position: -285px 0px;
+          }
+          #nav li:nth-of-type(9) {
+            margin-left: 2px;
+          }
+          #nav li:nth-of-type(11) {
+            margin-left: 2px;
+          }
+          #nav li:nth-of-type(11) a div::after {
+            background-position: -41px -229px;
+          }
 
-
-
-          
           #nav li a span {
             display: inline-block;
             margin-top: 1px;
@@ -401,59 +458,87 @@
 
         <nav id="nav">
           <ul>
-            <li><a href="">
+            <li>
+              <a href="">
                 <div></div>
                 <span>메일</span>
-              </a></li>
-            <li><a href="">
+              </a>
+            </li>
+            <li>
+              <a href="">
                 <div></div>
                 <span>카페</span>
-              </a></li>
-            <li><a href="">
+              </a>
+            </li>
+            <li>
+              <a href="">
                 <div></div>
                 <span>블로그</span>
-              </a></li>
-            <li><a href="">
+              </a>
+            </li>
+            <li>
+              <a href="">
                 <div></div>
                 <span>쇼핑</span>
-              </a></li>
-            <li><a href="">
+              </a>
+            </li>
+            <li>
+              <a href="">
                 <div></div>
                 <span>뉴스</span>
-              </a></li>
-            <li><a href="">
+              </a>
+            </li>
+            <li>
+              <a href="">
                 <div></div>
                 <span>증권</span>
-              </a></li>
-            <li><a href="">
+              </a>
+            </li>
+            <li>
+              <a href="">
                 <div></div>
                 <span>부동산</span>
-              </a></li>
-            <li><a href="">
+              </a>
+            </li>
+            <li>
+              <a href="">
                 <div></div>
                 <span>지도</span>
-              </a></li>
-            <li><a href="">
+              </a>
+            </li>
+            <li>
+              <a href="">
                 <div></div>
                 <span>웹툰</span>
-              </a></li>
-            <li style="margin-top:-1px"><a href="">
-              <footer>
-                <header id="chichi"><img src="https://s.pstatic.net/static/www/mobile/edit/20240112_1095/upload_1705057885416AaxUM.png" width="40" height="40"></header>
-              </footer>  
-                <span style="margin-top:-3px">치지직</span>
-              </a></li>
-            <li><a href="">
+              </a>
+            </li>
+            <li style="margin-top: -1px">
+              <a href="">
+                <footer>
+                  <header id="chichi">
+                    <img
+                      src="https://s.pstatic.net/static/www/mobile/edit/20240112_1095/upload_1705057885416AaxUM.png"
+                      width="40"
+                      height="40"
+                    />
+                  </header>
+                </footer>
+                <span style="margin-top: -3px">치지직</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
                 <div></div>
                 <span></span>
-              </a></li>
+              </a>
+            </li>
           </ul>
         </nav>
 
         <style>
           #main {
             margin-top: 27px;
-            display:flex;
+            display: flex;
           }
 
           #main-left {
@@ -461,15 +546,16 @@
             margin-right: 30px;
           }
 
-          #main-right{
+          #main-right {
             width: 420px;
           }
 
-          #main-left-ad, #main-right-ad {
+          #main-left-ad,
+          #main-right-ad {
             background-color: gray;
           }
 
-          aside[id$=ad] {
+          aside[id$='ad'] {
             border-radius: 8px;
             margin-bottom: 16px;
           }
@@ -478,8 +564,8 @@
             height: 130px;
           }
 
-          section[id^=main] {
-            box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, .04);
+          section[id^='main'] {
+            box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, 0.04);
             border-radius: 8px;
             margin-bottom: 16px;
           }
@@ -494,11 +580,10 @@
             font-size: 14.7px;
             display: flex;
             flex-flow: column;
-            
           }
-          
+
           #main-login-button {
-            border: 1px solid rgba(0, 0, 0, .06);
+            border: 1px solid rgba(0, 0, 0, 0.06);
             margin-top: 10px;
             padding: 17px;
             height: 56px;
@@ -508,7 +593,6 @@
             text-decoration: none;
             margin-bottom: 15px;
             font-weight: 500;
-            
           }
 
           #main-login-button i {
@@ -519,7 +603,7 @@
             width: 72px;
             height: 14px;
             height: 14px;
-            
+
             display: inline-block;
             margin: 3px 8px 0 0;
             vertical-align: -1px;
@@ -528,7 +612,7 @@
           #main-login > div:last-of-type {
             font-weight: 400;
             font-size: 13.65px;
-            display: flex;;
+            display: flex;
             justify-content: center;
             align-items: center;
           }
@@ -539,13 +623,13 @@
             color: #606060;
           }
 
-          #main-login > div:last-of-type a:first-of-type, #main-login > div:last-of-type a:last-of-type {
+          #main-login > div:last-of-type a:first-of-type,
+          #main-login > div:last-of-type a:last-of-type {
             position: relative;
             top: 3px;
           }
 
-
-          #main-login > div:last-of-type a:hover{
+          #main-login > div:last-of-type a:hover {
             text-decoration: underline;
           }
 
@@ -555,7 +639,8 @@
             margin-bottom: 1px;
           }
 
-          #main-login > div:last-of-type > a:nth-of-type(2)::before, #main-login > div:last-of-type > a:nth-of-type(2)::after {
+          #main-login > div:last-of-type > a:nth-of-type(2)::before,
+          #main-login > div:last-of-type > a:nth-of-type(2)::after {
             content: '';
             display: inline-block;
             width: 1px;
@@ -593,8 +678,9 @@
             display: flex;
             flex-flow: column;
           }
-          
-          #main-newstand-top, #main-shopping-top {
+
+          #main-newstand-top,
+          #main-shopping-top {
             flex: 1;
             padding: 18px 20px;
           }
@@ -611,17 +697,15 @@
             top: -4px;
           }
 
-
-          .left-section .slash, .left-section .dot {
+          .left-section .slash,
+          .left-section .dot {
             font-weight: 800;
-            color: rgba(8, 8, 8, .5);
+            color: rgba(8, 8, 8, 0.5);
           }
-
 
           .left-section .slash {
             position: relative;
             padding-left: 26px;
-            
           }
 
           .left-section .slash::before {
@@ -642,7 +726,7 @@
           .left-section header {
             margin-top: 1px;
             font-size: 1.6rem;
-            color: rgba(8, 8, 8, .5);
+            color: rgba(8, 8, 8, 0.5);
             display: flex;
             justify-content: flex-start;
             line-height: 23px;
@@ -664,7 +748,7 @@
             font-size: 1.4rem;
             line-height: 26px;
           }
-          
+
           #main-newstand-gray .left {
             flex: 1;
             display: flex;
@@ -673,8 +757,6 @@
           #main-newstand-gray .left > a:first-of-type {
             width: 75.58px;
           }
-          
-
 
           #main-newstand-gray .left > a:first-of-type::after {
             content: '';
@@ -736,7 +818,7 @@
           }
 
           #main-newstand-gray .bold::before {
-            content: "";
+            content: '';
             display: block;
             position: absolute;
             top: 7px;
@@ -758,14 +840,12 @@
             vertical-align: 4px;
           }
 
-
           .left-section a {
             text-decoration: none;
           }
           .left-section a:visited {
             color: inherit;
           }
-
 
           .left-section a:hover {
             text-decoration: underline;
@@ -806,14 +886,15 @@
             position: relative;
           }
 
-          #main-newstand footer .list, #main-newstand footer .grid {
+          #main-newstand footer .list,
+          #main-newstand footer .grid {
             position: absolute;
             border: none;
             cursor: pointer;
             top: 0;
             background-color: transparent;
           }
-          
+
           #main-newstand footer .list {
             right: 49px;
             padding: 18px 9px 18px 20px;
@@ -845,13 +926,13 @@
             background-position: -388px -308px;
           }
 
-
           #main-newstand footer .grid {
             right: 0;
             padding: 18px 20px 18px 9px;
           }
 
-          .left-section footer .prev, .left-section footer .next {
+          .left-section footer .prev,
+          .left-section footer .next {
             background: none;
             border: none;
             content: '';
@@ -861,7 +942,7 @@
             background-color: #fff;
             position: relative;
             display: inline-block;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .06);
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
             border-radius: 50%;
             cursor: pointer;
           }
@@ -870,7 +951,8 @@
             transform: rotate(180deg);
           }
 
-          .left-section footer .prev::before, .left-section footer .next::before {
+          .left-section footer .prev::before,
+          .left-section footer .next::before {
             content: '';
             display: block;
             position: absolute;
@@ -901,7 +983,7 @@
           }
 
           #main-newstand footer .total {
-            color: rgba(96, 96, 96, .5);
+            color: rgba(96, 96, 96, 0.5);
           }
 
           #main-shopping {
@@ -916,8 +998,6 @@
 
           #main-shopping-gray {
             display: flex;
-            
-
           }
 
           #main-shopping-gray .left {
@@ -935,7 +1015,6 @@
           #main-shopping-top header {
             position: relative;
           }
-
 
           #main-shopping-top header .right {
             position: absolute;
@@ -955,7 +1034,7 @@
 
           #main-shopping-grid .item {
             line-height: 20px;
-            letter-spacing: -.8px;
+            letter-spacing: -0.8px;
             font-size: 1.4rem;
           }
           #main-shopping-grid .item > .image {
@@ -970,15 +1049,20 @@
             text-align: left;
           }
 
-          .item:nth-child(1), .item:nth-child(2), .item:nth-child(3), .item:nth-child(4) {
+          .item:nth-child(1),
+          .item:nth-child(2),
+          .item:nth-child(3),
+          .item:nth-child(4) {
             grid-row: 1/3;
           }
 
-          .item:nth-child(5), .item:nth-child(6), .item:nth-child(11) > div:first-child {
+          .item:nth-child(5),
+          .item:nth-child(6),
+          .item:nth-child(11) > div:first-child {
             padding: 10px 12px 5px;
             border-radius: 4px;
-            background: rgba(245,248,251,.6);
-            border: 1px solid rgba(0,0,0,.05);
+            background: rgba(245, 248, 251, 0.6);
+            border: 1px solid rgba(0, 0, 0, 0.05);
           }
 
           .item:nth-child(6) {
@@ -989,7 +1073,6 @@
             height: 135px;
             margin-bottom: 10px;
           }
-
         </style>
 
         <main id="main">
@@ -1006,12 +1089,11 @@
                 </header>
                 <div id="main-newstand-gray">
                   <div class="left">
-                    <a href="#" >전체언론사</a>
+                    <a href="#">전체언론사</a>
                     <div id="main-newstand-animation">
                       <a href="#">연합뉴스</a>
                       <a href="#">이재환 이재환 이재환 이재환 이재환 이재환 이재환 이재환 이재환 이재환</a>
                     </div>
-                    
                   </div>
                   <div class="right">
                     <a href="#">뉴스스탠드</a>
@@ -1054,7 +1136,6 @@
               </footer>
             </section>
 
-
             <section id="main-shopping" class="left-section">
               <div id="main-shopping-top">
                 <header>
@@ -1071,11 +1152,10 @@
                 </header>
                 <div id="main-shopping-gray">
                   <div class="left">
-                    <a href="#" >오늘의 혜택</a>
+                    <a href="#">오늘의 혜택</a>
                     <div id="main-shopping-animation">
                       <a href="#">이재환 이재환 이재환 이재환 이재환 이재환 이재환 이재환 이재환 이재환</a>
                     </div>
-                    
                   </div>
                 </div>
                 <div id="main-shopping-grid">
@@ -1125,11 +1205,7 @@
                 <button class="next"></button>
               </footer>
             </section>
-
-
           </div>
-
-
 
           <div id="main-right">
             <section id="main-login">
@@ -1153,7 +1229,6 @@
           </div>
         </main>
       </div>
-      
-  </div>
-</body>
+    </div>
+  </body>
 </html>

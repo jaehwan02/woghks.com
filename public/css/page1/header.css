@@ -1,4 +1,3 @@
-
 header {
   width: 100%;
   position: fixed;
@@ -9,7 +8,7 @@ header > div {
   justify-content: space-between;
   padding: 30px 0 0 0;
   height: 56px;
-  align-items: center;
+  align-items: baseline;
 }
 
 #left-nav {
@@ -36,8 +35,8 @@ header > div {
 }
 
 #left-nav :nth-child(2) {
-  color: #FFF;
-  text-shadow: 0px 0px 20px #FFF;
+  color: #fff;
+  text-shadow: 0px 0px 20px #fff;
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
@@ -49,8 +48,8 @@ header > div {
 #right-nav div:nth-child(1):hover {
   background: white;
   border-radius: 6px;
-  border: 1px solid #FFF;
-  box-shadow: 0px 0px 5px 0px #FFF;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 5px 0px #fff;
 }
 
 #right-nav div:nth-child(1):hover a {
@@ -60,8 +59,8 @@ header > div {
 #right-nav :nth-child(2):hover {
   background: white;
   border-radius: 6px;
-  border: 1px solid #FFF;
-  box-shadow: 0px 0px 5px 0px #FFF;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 5px 0px #fff;
 }
 
 #right-nav div:nth-child(2):hover a {
@@ -71,8 +70,8 @@ header > div {
 #right-nav :nth-child(3):hover {
   background: white;
   border-radius: 6px;
-  border: 1px solid #FFF;
-  box-shadow: 0px 0px 5px 0px #FFF;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 5px 0px #fff;
 }
 
 #right-nav div:nth-child(3):hover a {

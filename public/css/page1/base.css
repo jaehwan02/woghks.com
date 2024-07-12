@@ -1,12 +1,14 @@
 @font-face {
   font-family: 'PyeongChangPeace';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2')
+    format('woff2');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'PyeongChangPeace';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2')
+    format('woff2');
   font-weight: 300;
   font-style: normal;
 }
@@ -14,13 +16,13 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "PyeongChangPeace";
+  font-family: 'PyeongChangPeace';
   font-weight: 300;
 }
 
 html {
   /* overflow-x: clip; */
-  background: #0E0E0F;
+  background: #0e0e0f;
   /* cursor: none; */
 }
 
@@ -38,4 +40,9 @@ a {
   backdrop-filter: invert(100%);
   pointer-events: none;
   display: none;
+}
+
+#newsl {
+  color: black;
+  z-index: 50;
 }

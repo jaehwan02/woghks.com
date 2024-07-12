@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node.js로 서버 개발하기</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Node.js로 서버 개발하기</h1>
+      </header>
+      <main>
+        <article>
+          <h2>Node.js란 무엇인가?</h2>
+          <p>Node.js는 서버 사이드에서 자바스크립트를 실행할 수 있게 하는 런타임 환경입니다.</p>
+          <h2>Node.js의 주요 기능</h2>
+          <p>Node.js는 비동기 I/O, 이벤트 루프, npm 등 다양한 기능을 제공합니다.</p>
+          <h2>Node.js 사용 예제</h2>
+          <p>간단한 Node.js 예제 코드:</p>
+          <pre><code>
+                // 예제 코드
+                const http = require('http');
+
+                const server = http.createServer((req, res) => {
+                    res.statusCode = 200;
+                    res.setHeader('Content-Type', 'text/plain');
+                    res.end('Hello, World!');
+                });
+
+                server.listen(3000, () => {
+                    console.log('Server running at http://localhost:3000/');
+                });
+                </code></pre>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

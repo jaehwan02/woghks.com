@@ -3,7 +3,6 @@
   margin-bottom: 300px;
 }
 
-
 .project-box {
   width: 800px;
   height: 25.875rem;
@@ -11,7 +10,7 @@
   margin-bottom: 22px;
 
   border-radius: 0.5rem;
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: center;
 }
@@ -53,9 +52,9 @@
 }
 
 .nth2 li {
-  color: #FFF;
+  color: #fff;
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  }
+}
