@@ -135,13 +135,30 @@ gsap.to('#page4', {
 // 원 크기 및 위치 애니메이션
 gsap.to('#circle', {
   x: -window.innerWidth + 50, // 원이 오른쪽에서 왼쪽으로 이동
-  scale: 1500, // 원의 크기를 5배로 키움
+  scale: 200, // 원의 크기를 5배로 키움
   ease: 'none',
+  opacity: 3,
   scrollTrigger: {
     trigger: '#page4',
     start: 'top top',
     end: () => '+=' + document.querySelector('#page4').offsetWidth, // 컨테이너의 전체 너비만큼 스크롤
     scrub: 1,
+
     //markers: true // 스크롤 트리거 위치 표시
   },
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to('.circle2', {
+  scrollTrigger: {
+    trigger: '#last',
+    start: 'top top',
+    end: 'bottom top',
+    scrub: true,
+    //markers: true,
+  },
+  scale: 100,
+  opacity: 3,
+  ease: 'none',
 });

@@ -18,11 +18,14 @@
     <link rel="stylesheet" href="pages/css/page3/section1.css" />
 
     <link rel="stylesheet" href="pages/css/page4/circle.css" />
+    <link rel="stylesheet" href="pages/css/page4/newsletter.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
   </head>
 
   <body>
@@ -162,6 +165,7 @@
           <div class="me-header">About Me</div>
           <div class="profile">
             <div class="profile-left">
+              <br />
               <p><strong>이재환:</strong> 풀스택 개발자(희망)</p>
               <br />
               <p>안되는 만큼 노력하고 실패를 딛는 개발자입니다.</p>
@@ -170,11 +174,11 @@
               <br />
               <p>부산소프트웨어마이스터고등학교 재학중(2024.03)</p>
               <br />
-              <div>
-                <p>GitHub: jaehwan02</p>
-                <p>Velog: jaehwan02</p>
-                <p>Discord: jaehan0129</p>
-                <p>Email: jhrick0129@gmail.com</p>
+              <div id="linked">
+                <a href=""><p>GitHub: jaehwan02</p></a>
+                <a href=""><p>Velog: jaehwan02</p></a>
+                <a href=""><p>Discord: jaehan0129</p></a>
+                <a href=""><p>Email: jhrick0129@gmail.com</p></a>
               </div>
             </div>
             <div class="profile-right">
@@ -234,6 +238,27 @@
       </div>
     </div>
 
+    <div class="circle2"></div>
+    <div id="last">
+      <div class="container3">
+        <div>
+          <h1 id="news-h1">이재환의 기록 보관소</h1>
+        </div>
+        <main id="last-main">
+          <h2 id="news-h2">Newsletter</h2>
+          <form id="newsletter-form">
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" required />
+            <button type="submit">구독</button>
+          </form>
+          <div class="share">
+            <p id="news-p">이 글 공유하기:</p>
+            <button class="share-button" onclick="shareToFacebook()">Facebook</button>
+            <button class="share-button" onclick="shareToTwitter()">X</button>
+          </div>
+        </main>
+      </div>
+    </div>
     <a href="pages/html/test.html" id="newsl">Newsletter</a>
   </body>
 </html>

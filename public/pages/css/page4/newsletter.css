@@ -1,0 +1,93 @@
+.circle2 {
+  width: 50px;
+  height: 50px;
+  background-color: #0e0e0f;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: -1;
+}
+
+#last {
+  background-color: transparent;
+  width: 100vw;
+  height: 300vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#last-main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 0;
+  height: 400px;
+}
+.container3 {
+  text-align: center;
+}
+
+#news-h1 {
+  margin-top: 1750px;
+  font-size: 2em;
+  color: #fff;
+}
+
+#news-h2 {
+  font-size: 1.5em;
+  color: #fff;
+}
+
+#news-p {
+  color: #fff;
+}
+
+#newsletter-form {
+  margin: 20px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1em;
+  color: #fff;
+}
+
+input[type='email'] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+}
+
+button[type='submit'],
+.share-button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+}
+
+button[type='submit']:hover,
+.share-button:hover {
+  background-color: #555;
+}
+
+.share,
+.like {
+  margin: 20px 0;
+}
+
+.share-button {
+  display: inline-block;
+}
