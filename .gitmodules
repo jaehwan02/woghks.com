@@ -1,0 +1,3 @@
+[submodule "naver-clone"]
+	path = public/naver-clone
+	url = https://github.com/jaehwan02/naver-clone.git
