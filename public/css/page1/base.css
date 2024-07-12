@@ -37,4 +37,5 @@ a {
   z-index: 999;
   backdrop-filter: invert(100%);
   pointer-events: none;
+  display: none;
 }
