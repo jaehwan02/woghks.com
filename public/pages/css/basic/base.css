@@ -24,6 +24,7 @@ html {
   /* overflow-x: clip; */
   background: #0e0e0f;
   /* cursor: none; */
+  scroll-behavior: smooth;
 }
 
 a {
