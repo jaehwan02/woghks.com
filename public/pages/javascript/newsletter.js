@@ -10,7 +10,6 @@ function initializeNewsletterForm() {
       showToast('유효하지 않은 이메일입니다. 다시 입력해주세요.', true);
     } else {
       showToast('구독이 완료되었습니다: ' + email);
-      // 여기서 이메일을 서버로 전송하는 로직을 추가할 수 있습니다.
     }
   });
 }
@@ -31,7 +30,7 @@ function showToast(message, isError = false) {
   }
   setTimeout(() => {
     toast.className = 'toast hide';
-  }, 3000); // 3초 후에 토스트 메시지 숨기기
+  }, 3000);
 }
 
 function shareToFacebook() {
@@ -42,5 +41,4 @@ function shareToTwitter() {
   window.open('https://twitter.com/intent/tweet?url=' + document.URL, '_blank');
 }
 
-// 페이지가 로드될 때 폼 초기화 함수 호출
 window.onload = initializeNewsletterForm;

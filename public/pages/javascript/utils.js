@@ -7,7 +7,7 @@ function adjustLight() {
   const headerMoon = document.querySelector('#left-nav > div:nth-child(1) > img');
 
   if (!moon || !light || !headerMoon) {
-    console.error('필수 DOM 요소를 찾을 수 없습니다.');
+    console.error('에러');
     return;
   }
 
@@ -45,7 +45,7 @@ function initializeScroll() {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
-    }, 100); // 페이지 로드 후 잠시 대기
+    }, 100);
   }
 }
 

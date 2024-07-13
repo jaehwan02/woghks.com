@@ -4,7 +4,7 @@ function initializeAnimations() {
   const headerMoon = document.querySelector('#left-nav > div:nth-child(1) > img');
 
   if (!moon || !light || !headerMoon) {
-    console.error('필수 DOM 요소를 찾을 수 없습니다.');
+    console.error('에러');
     return;
   }
 
@@ -24,7 +24,7 @@ function initializeAnimations() {
       scrub: 1.5,
     },
     onUpdate: () => {
-      console.log('애니메이션이 업데이트 중입니다.');
+      console.log('정상');
       adjustLight();
     },
     ease: 'none',

@@ -188,3 +188,14 @@ article {
   visibility: hidden;
   opacity: 0;
 }
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  position: absolute;
+  z-index: 999;
+  backdrop-filter: invert(100%);
+  pointer-events: none;
+  display: none;
+}
