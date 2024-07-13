@@ -7,7 +7,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
   commentForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    addComment(usernameInput.value.trim(), commentInput.value.trim());
+    const username = usernameInput.value.trim();
+    const comment = commentInput.value.trim();
+
+    console.log('폼 제출됨');
+    console.log('아이디:', username);
+    console.log('댓글:', comment);
+
+    if (!username) {
+      showToast('아이디를 입력해주세요.', true);
+      usernameInput.focus();
+    } else if (!comment) {
+      showToast('댓글 내용을 입력해주세요.', true);
+      commentInput.focus();
+    } else {
+      addComment(username, comment);
+      showToast('댓글이 성공적으로 등록되었습니다.', false);
+      usernameInput.value = '';
+      commentInput.value = '';
+    }
   });
 
   function addComment(username, commentText, parent = null) {
@@ -92,8 +110,6 @@ document.addEventListener('DOMContentLoaded', function () {
         commentsList.appendChild(newComment);
       }
 
-      usernameInput.value = '';
-      commentInput.value = '';
       updateCommentsCount();
     }
   }
@@ -101,5 +117,19 @@ document.addEventListener('DOMContentLoaded', function () {
   function updateCommentsCount() {
     const count = commentsList.querySelectorAll('.comment').length;
     commentsCount.textContent = count;
+  }
+
+  function showToast(message, isError = false) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.className = 'toast show';
+    if (isError) {
+      toast.style.backgroundColor = '#e74c3c'; // 경고 메시지 색상 (빨간색)
+    } else {
+      toast.style.backgroundColor = '#27ae60'; // 성공 메시지 색상 (초록색)
+    }
+    setTimeout(() => {
+      toast.className = 'toast hide';
+    }, 3000); // 3초 후에 토스트 메시지 숨기기
   }
 });

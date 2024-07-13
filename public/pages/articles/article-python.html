@@ -40,13 +40,14 @@
         </article>
         <div class="comments-section">
           <h2>댓글쓰기 (<span id="comments-count">0</span>)</h2>
-          <form id="comment-form">
+          <form id="comment-form" novalidate>
             <input type="text" id="username-input" placeholder="아이디를 입력해주세요." required />
             <textarea id="comment-input" placeholder="댓글 내용을 입력해주세요." required></textarea>
             <button type="submit">등록</button>
           </form>
           <ul id="comments-list"></ul>
         </div>
+        <div id="toast" class="toast"></div>
       </main>
     </div>
     <script src="article.js"></script>

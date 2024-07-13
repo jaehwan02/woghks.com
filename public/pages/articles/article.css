@@ -45,6 +45,7 @@ article {
   text-decoration: none;
   color: white;
 }
+
 .comments-section {
   margin-top: 20px;
 }
@@ -158,4 +159,32 @@ article {
 
 .replies-list .comment {
   margin-top: 10px;
+}
+
+.toast {
+  visibility: hidden;
+  max-width: 50%;
+  margin: 0 auto;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 10px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  font-size: 1em;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.toast.hide {
+  visibility: hidden;
+  opacity: 0;
 }
