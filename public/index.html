@@ -259,28 +259,11 @@
       </div>
     </div>
   </body>
+
+  <script src="pages/javascript/animation.js"></script>
+  <script src="pages/javascript/cursor.js"></script>
+  <script src="pages/javascript/main.js"></script>
+  <script src="pages/javascript/utils.js"></script>
+  <script src="pages/javascript/newsletter.js"></script>
+  <script src="pages/javascript/progress.js"></script>
 </html>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    if (window.location.hash) {
-      setTimeout(function () {
-        const element = document.querySelector(window.location.hash);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100); // 페이지 로드 후 잠시 대기
-    }
-  });
-
-  window.addEventListener('hashchange', function () {
-    const element = document.querySelector(window.location.hash);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-</script>
-
-<script src="pages/javascript/animation.js"></script>
-<script src="pages/javascript/cursor.js"></script>
-<script src="pages/javascript/aboutme.js"></script>

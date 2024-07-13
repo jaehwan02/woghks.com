@@ -1,114 +1,76 @@
-document.addEventListener('DOMContentLoaded', function () {
+function initializeAnimations() {
   const moon = document.getElementById('mMoon');
   const light = document.getElementById('light');
   const headerMoon = document.querySelector('#left-nav > div:nth-child(1) > img');
 
-  let startX;
-  let startY;
-
-  function adjustLight() {
-    console.log('adjust');
-
-    const headerMoonRect = headerMoon.getBoundingClientRect();
-    const lightRect = light.getBoundingClientRect();
-    const moonRect = moon.getBoundingClientRect();
-
-    if (!light.style.top) {
-      startX = headerMoonRect.left;
-      startY = headerMoonRect.top - lightRect.height / 2 + headerMoonRect.height * 3;
-
-      light.style.top = `${startY}px`;
-      light.style.left = `${startX}px`;
-    }
-
-    console.log(`startX: ${startX}, startY: ${startY}`);
-
-    light.style.transform = '';
-
-    const deltaX = moonRect.left + moonRect.width * 0.3 - startX;
-    const deltaY = moonRect.top - startY;
-
-    const angle = (Math.atan2(deltaY, deltaX) * 180) / Math.PI + 1.3;
-    light.style.transform = `rotate(${angle}deg)`;
-
-    const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-    const scale = distance / 1023;
-    light.style.transform += ` scale(${scale})`;
-
-    console.log(`Angle: ${angle} degrees, Scale: ${scale}`);
+  if (!moon || !light || !headerMoon) {
+    console.error('필수 DOM 요소를 찾을 수 없습니다.');
+    return;
   }
 
   function initialize() {
     adjustLight();
     window.addEventListener('resize', adjustLight);
     window.addEventListener('scroll', adjustLight);
-    window.addEventListener('load', adjustLight);
   }
 
   requestAnimationFrame(initialize);
 
   gsap.to('#mMoon', {
-    //움직일 대상의 selector
     scrollTrigger: {
-      trigger: '#mMoon', // 스크롤을 감지할 대상의 selector
-      start: '150% 30%', // trigger의 0% 지점과 viewport의 0% 지점이 만나면 애니메이션 시작
-      end: '200%  0%', // trigger의 100% 지점과 viewport의 100% 지점이 만나면 애니메이션 종료
-      scrub: 1.5, // 반대로 스크롤할때도 애니메이션을 반대로 적용할지 여부
-      ///markers: true, // trigger의 시작, 끝 지점을 보여줌 (디버깅용)
+      trigger: '#mMoon',
+      start: '150% 30%',
+      end: '200% 0%',
+      scrub: 1.5,
     },
     onUpdate: () => {
       console.log('애니메이션이 업데이트 중입니다.');
       adjustLight();
     },
-    ease: 'none', // 애니메이션의 속도 곡선
-    top: headerMoon.getBoundingClientRect().top + 5, // 애니메이션의 속성
-    left: headerMoon.getBoundingClientRect().left, // 애니메이션의 속성
+    ease: 'none',
+    top: headerMoon.getBoundingClientRect().top + 5,
+    left: headerMoon.getBoundingClientRect().left,
     width: headerMoon.getBoundingClientRect().width - 11,
-    // height: headerMoon.getBoundingClientRect().height,
-    // position: "fixed",
     rotate: '26deg',
-    opacity: 0, // 요소가 사라지도록 설정
+    opacity: 0,
   });
 
   gsap.to('#light2', {
     scrollTrigger: {
-      trigger: '#mMoon', // 스크롤을 감지할 대상의 selector
-      start: '400% 0%', // trigger의 0% 지점과 viewport의 0% 지점이 만나면 애니메이션 시작
-      end: '200% 100%', // trigger의 100% 지점과 viewport의 100% 지점이 만나면 애니메이션 종료
-      scrub: 1, // 반대로 스크롤할때도 애니메이션을 반대로 적용할지 여부
-      //markers: true, // trigger의 시작, 끝 지점을 보여줌 (디버깅용)
+      trigger: '#mMoon',
+      start: '400% 0%',
+      end: '200% 100%',
+      scrub: 1,
     },
     opacity: 1,
   });
 
   gsap.fromTo(
-    '#posts', // 스크롤 애니메이션을 적용할 대상
-    { opacity: 0, y: 100 }, // 초기상태
+    '#posts',
+    { opacity: 0, y: 100 },
     {
-      opacity: 1, //적용할 상태
-      y: 0, //적용할 상태
+      opacity: 1,
+      y: 0,
       scrollTrigger: {
         trigger: '#posts',
         start: '20% 80%',
         end: '100% 100%',
         scrub: 1,
-        //markers: true,
       },
     },
   );
 
   gsap.fromTo(
-    '#page3', // 스크롤 애니메이션을 적용할 대상
-    { opacity: 0, y: 100 }, // 초기상태
+    '#page3',
+    { opacity: 0, y: 100 },
     {
-      opacity: 1, //적용할 상태
-      y: 0, //적용할 상태
+      opacity: 1,
+      y: 0,
       scrollTrigger: {
         trigger: '#page3',
         start: '20% 80%',
         end: '100% 100%',
         scrub: 1,
-        //markers: true,
       },
     },
   );
@@ -117,45 +79,37 @@ document.addEventListener('DOMContentLoaded', function () {
     filter: 'drop-shadow(0px 0px 5px #FFF)',
     scrollTrigger: {
       trigger: '#mMoon',
-      start: '410% 0%', // trigger의 0% 지점과 viewport의 0% 지점이 만나면 애니메이션 시작
-      end: '200% 100%', // #sMoon 요소의 하단이 뷰포트의 20% 위치에 도달할 때 애니메이션 끝
-      //markers: true, // 스크롤 트리거 위치 표시
-      toggleActions: 'play none none reverse', // 스크롤 방향에 따라 애니메이션 제어
+      start: '410% 0%',
+      end: '200% 100%',
+      toggleActions: 'play none none reverse',
     },
   });
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // 가로 스크롤 애니메이션
   gsap.to('#page4', {
-    xPercent: -300, // 전체 너비에서 200%를 뺀 값으로 이동 (3개의 섹션이므로 200%)
+    xPercent: -300,
     ease: 'none',
     scrollTrigger: {
       trigger: '#page4',
       pin: true,
       scrub: 1,
-      end: () => '+=' + document.querySelector('#page4').offsetWidth, // 컨테이너의 전체 너비만큼 스크롤
-      //markers: true, // 스크롤 트리거 위치 표시
+      end: () => '+=' + document.querySelector('#page4').offsetWidth,
     },
   });
 
-  // 원 크기 및 위치 애니메이션
   gsap.to('#circle', {
-    x: -window.innerWidth + 50, // 원이 오른쪽에서 왼쪽으로 이동
-    scale: 200, // 원의 크기를 5배로 키움
+    x: -window.innerWidth + 50,
+    scale: 200,
     ease: 'none',
     opacity: 3,
     scrollTrigger: {
       trigger: '#page4',
       start: 'top top',
-      end: () => '+=' + document.querySelector('#page4').offsetWidth, // 컨테이너의 전체 너비만큼 스크롤
+      end: () => '+=' + document.querySelector('#page4').offsetWidth,
       scrub: 1,
-
-      //markers: true // 스크롤 트리거 위치 표시
     },
   });
-
-  gsap.registerPlugin(ScrollTrigger);
 
   gsap.to('.circle2', {
     scrollTrigger: {
@@ -163,10 +117,9 @@ document.addEventListener('DOMContentLoaded', function () {
       start: 'top top',
       end: 'bottom top',
       scrub: true,
-      //markers: true,
     },
     scale: 100,
     opacity: 3,
     ease: 'none',
   });
-});
+}
