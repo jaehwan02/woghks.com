@@ -1,9 +1,11 @@
+/* 헤더 스타일 */
 header {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
+  mix-blend-mode: difference;
 }
 
 header > div {
@@ -20,6 +22,27 @@ header > div {
   margin-right: 280px;
 }
 
+#left-nav :nth-child(1) {
+  width: 18px;
+  height: 20px;
+  margin-right: 8px;
+  z-index: 20;
+}
+
+#left-nav :nth-child(2),
+#left-nav a,
+#right-nav a {
+  color: #fff;
+  text-shadow: 0px 0px 20px #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  z-index: 1;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
 #right-nav {
   display: flex;
 }
@@ -31,53 +54,22 @@ header > div {
   transition: all 0.25s;
 }
 
-#left-nav :nth-child(1) {
-  width: 18px;
-  height: 20px;
-  margin-right: 8px;
-  z-index: 20;
-}
-
-#left-nav :nth-child(2) {
-  color: #fff;
-  text-shadow: 0px 0px 20px #fff;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  letter-spacing: 0.2px;
-  z-index: 1;
-}
-
-#right-nav div:nth-child(1):hover {
+#right-nav div:hover {
   background: white;
   border-radius: 6px;
   border: 1px solid #fff;
   box-shadow: 0px 0px 5px 0px #fff;
 }
 
-#right-nav div:nth-child(1):hover a {
-  color: black;
+#right-nav div:hover a {
+  color: #000 !important;
+  text-shadow: 0px 0px 20px #000 !important;
 }
 
-#right-nav :nth-child(2):hover {
-  background: white;
+#right-nav a:hover {
+  background: #fff;
   border-radius: 6px;
-  border: 1px solid #fff;
-  box-shadow: 0px 0px 5px 0px #fff;
-}
-
-#right-nav div:nth-child(2):hover a {
-  color: black;
-}
-
-#right-nav :nth-child(3):hover {
-  background: white;
-  border-radius: 6px;
-  border: 1px solid #fff;
-  box-shadow: 0px 0px 5px 0px #fff;
-}
-
-#right-nav div:nth-child(3):hover a {
-  color: black;
+  color: #000 !important;
+  text-shadow: 0px 0px 20px #000 !important;
+  transition: color 0.3s, text-shadow 0.3s, background 0.3s;
 }

@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // height: headerMoon.getBoundingClientRect().height,
     // position: "fixed",
     rotate: '26deg',
+    opacity: 0, // 요소가 사라지도록 설정
   });
 
   gsap.to('#light2', {
