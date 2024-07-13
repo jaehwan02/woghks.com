@@ -100,7 +100,7 @@ function initializeAnimations() {
 
   gsap.to('#circle', {
     x: -window.innerWidth + 50,
-    scale: 200,
+    scale: 300,
     ease: 'none',
     opacity: 3,
     scrollTrigger: {
