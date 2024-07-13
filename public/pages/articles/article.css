@@ -45,3 +45,117 @@ article {
   text-decoration: none;
   color: white;
 }
+.comments-section {
+  margin-top: 20px;
+}
+
+#comment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#username-input,
+#comment-input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #1e1e1f;
+  color: white;
+}
+
+#comment-form button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+#comment-form button:hover {
+  background-color: #45a049;
+}
+
+#comments-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.comment .header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.comment .content {
+  margin-bottom: 10px;
+}
+
+.comment .footer {
+  text-align: right;
+}
+
+.reply-button {
+  background: none;
+  border: none;
+  color: #4caf50;
+  cursor: pointer;
+}
+
+.reply-button:hover {
+  text-decoration: underline;
+}
+
+.reply-form {
+  display: none;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.reply-form input,
+.reply-form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #1e1e1f;
+  color: white;
+}
+
+.reply-form button {
+  align-self: flex-end;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.reply-form button:hover {
+  background-color: #45a049;
+}
+
+.replies-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 20px;
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  padding-left: 10px;
+}
+
+.replies-list .comment {
+  margin-top: 10px;
+}
