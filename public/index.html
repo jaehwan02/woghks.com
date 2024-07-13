@@ -5,21 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>이재환의 기록 보관소</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-
     <link rel="stylesheet" href="pages/css/basic/base.css" />
     <link rel="stylesheet" href="pages/css/basic/deco.css" />
     <link rel="stylesheet" href="pages/css/page1/footer.css" />
     <link rel="stylesheet" href="pages/css/basic/gradiant.css" />
     <link rel="stylesheet" href="pages/css/basic/header.css" />
     <link rel="stylesheet" href="pages/css/page1/main.css" />
-
     <link rel="stylesheet" href="pages/css/page2/section.css" />
-
     <link rel="stylesheet" href="pages/css/page3/section1.css" />
-
     <link rel="stylesheet" href="pages/css/page4/circle.css" />
     <link rel="stylesheet" href="pages/css/page4/newsletter.css" />
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
@@ -124,7 +119,6 @@
           <div class="project-box">
             <div id="project-box2">
               <div class="nth1"><img src="pages/image/png/danlac.png" alt="" class="project-logo" /></div>
-
               <div class="nth2">
                 <div>
                   <h3>독서 동기부여 어플 단락</h3>
@@ -182,7 +176,7 @@
                 <a href="https://github.com/jaehwan02"><p>GitHub: jaehwan02</p></a>
                 <a href="https://velog.io/@jaehwan0129"><p>Velog: jaehwan02</p></a>
                 <a href="https://www.instagram.com/woghks29"><p>instagram: woghks29</p></a>
-                <a href="mailto:jhrick0129@gmail.com?subject=안녕하세요."><p>Email: jhrick0129@gmail.com</p></a>
+                <a href="mailto:jhrick0129@gmail.com?subject=안녕하세요."><p>Email: jhrick0129@gmail.com></p></a>
               </div>
             </div>
             <div class="profile-right">
@@ -266,6 +260,26 @@
     </div>
   </body>
 </html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.location.hash) {
+      setTimeout(function () {
+        const element = document.querySelector(window.location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100); // 페이지 로드 후 잠시 대기
+    }
+  });
+
+  window.addEventListener('hashchange', function () {
+    const element = document.querySelector(window.location.hash);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+</script>
 
 <script src="pages/javascript/animation.js"></script>
 <script src="pages/javascript/cursor.js"></script>
