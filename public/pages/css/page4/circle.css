@@ -71,7 +71,7 @@ body {
 }
 .progress {
   flex: 1;
-  height: 12px;
+  height: 14px;
   background-color: #e0e0e0;
   border-radius: 5px;
   overflow: hidden;
