@@ -122,10 +122,12 @@
 
           if (!query || title.includes(query) || content.includes(query)) {
             resultsContainer.innerHTML += `
+                      <a href="${article.link}">
                         <div class="result">
-                            <h3><a href="${article.link}">${article.title}</a></h3>
+                            <h3>${article.title}</h3>
                             <p>${article.content}</p>
                         </div>
+                      </a>
                     `;
             resultsFound = true;
           }

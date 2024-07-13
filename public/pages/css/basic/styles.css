@@ -112,7 +112,7 @@ main h2 {
   line-height: normal;
 }
 
-#search-results > div:hover {
+#search-results > a > div:hover {
   border-radius: 6px;
   border: 1px solid #fff;
   box-shadow: 0px 0px 5px 0px #fff;
