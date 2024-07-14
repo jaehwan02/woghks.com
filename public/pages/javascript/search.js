@@ -70,7 +70,7 @@ function performSearch(query) {
   });
 
   if (!resultsFound) {
-    resultsContainer.innerHTML = '<p>검색 결과가 없습니다.</p>';
+    resultsContainer.innerHTML = '<p id="none-search">검색 결과가 없습니다.</p>';
   }
 }
 
