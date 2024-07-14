@@ -25,6 +25,7 @@ html {
   background-color: #0c111c;
   scroll-behavior: smooth;
   overflow-x: clip;
+  width: 100vw;
 }
 
 a {
